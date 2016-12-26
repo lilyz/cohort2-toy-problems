@@ -16,6 +16,17 @@
   */
 
 var allAnagrams = function(string) {
-	
+  var word='';
+  var str=string.split('');
+  var arr=[],arr2[];
+  var len=(str.length*str.length-1)+1;
+  for (var i = 0; i <len; i++) {
+     for (var i = 0; i < str.length; i++) {
+         var r=str[Math.floor(Math.random()*str.length)]
+         //word+=r      }
+     arr.push(word);
+  
+  }
+  return arr;
 
-};
+}

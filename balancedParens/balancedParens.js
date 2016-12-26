@@ -24,7 +24,20 @@
  *	"())"
  */
 
- var balancedParens = function (input) {
-	
- };
-	
+ 
+ //step1
+
+  var balancedParens = function (input) {
+     var inp=input.split('');
+     if (inp[0]==='(' && inp.length%2===0) {
+       for (var i = 0; i < inp.length; i++) {
+          if (inp[i]==='(' && inp[inp.length-(i+1)]===')') {
+            return true
+          }else 
+          return false
+        }
+        
+     }else 
+     return false
+
+  }

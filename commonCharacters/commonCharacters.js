@@ -12,6 +12,35 @@
 
 //Works for any number of input strings:
 var commonCharacters = function(string1, string2) {
+  var str1 = string1.split('');
+  var str2 = string2.split('');
+  var arr  = [];
+  		//first case -two strings
+  str1.forEach(function(element){
+    str2.forEach(function(element2){
+      if (element===element2) {
+        arr.push(element)
+      }
+    })
+  })
+  return  arr.join('');
+
+  	//sec case more than two strings
+
+
+ // var args = Array.prototype.slice.call(arguments);
+ //   	 // args.sort();
+
+ // if (arguments.length>2) {
+ //      args.forEach(function(str){
+ //        str.split('').forEach(function(element){
+ //          arr.join('').forEach(function(element2){
+ //              if (element===element2) {
+ //                 arr2.push(element)
+ //               }
+ //          })
+ //        })
+ //      })
+    
   
 };
-

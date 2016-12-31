@@ -16,4 +16,26 @@
 * Example:
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
-*/
+*/  
+function rockPaperScissors(round) {
+  var data = ["paper", "rock", "scissors"];
+    data = data.slice(); 
+    var permutations = [],
+        stack = [];
+
+    function rock() {
+        if (data.length == 0) {
+            permutations.push(stack.slice());
+        }
+        for (var i = 0; i < data.length; i++) {
+            var x = data.splice(i, 1);
+            stack.push(x);
+            rock();
+            stack.pop();
+            data.splice(i, 0, x);
+        }
+    }
+
+    rock();
+    return permutations;
+}

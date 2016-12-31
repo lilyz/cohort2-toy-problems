@@ -16,4 +16,22 @@
 * Example:
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
-*/
+*/ function rockPaperScissors(n){
+	var x = [];
+	var box = [];
+	var obj = {rock:0,paper:1,scissors:2};
+	for (var i = 0; i < n; i++) {
+		x[i] = "rock"
+	}
+
+for (var i = n-2; i > 0; i--) {
+  for (var z in obj){
+	for (var key in obj){
+		box.push(x);
+		x[n-1] = key;
+	}
+  	x[i] = z;
+  }
+}
+
+}

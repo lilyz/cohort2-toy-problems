@@ -1,3 +1,16 @@
+function rockPaperScissors(num){
+   var newarr=[]
+   var newarr2=[]
+   var arr=["rock","paper","scissors"]
+   for(var i=0;i<Math.pow(num,num);i++){
+   newarr.push(arr[Math.floor(Math.random() * arr.length)])
+   
+   }
+   return newarr
+
+}
+
+
 
 /*
 * Write a function that generates every sequence of throws a single

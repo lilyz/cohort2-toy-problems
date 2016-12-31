@@ -19,14 +19,23 @@
 */
 var arr=[];
 function game(){
-	
+	var ne=[];
 	var r="rock"
 	var p="paper"
 	var s="scissors"
-		for(var i= 0; i<3; i++){
-			arr.push("rock")
+		 for(var i= 0; i<; i++){
+		    	arr.push(r)
+			   
+			for(var j=0; i<ne; i++){
+		     	arr.push(p)
+			    
+				for(var d= 0; i<27; i++){
+					arr.push(s)
+					ne.push(arr)
+				}
+
+			}
 		}	
 
-return arr;
+return ne;
 }
-

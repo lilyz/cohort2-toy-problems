@@ -17,3 +17,25 @@
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
 */
+
+function rockPaperScissors(player){
+/* Omega elems = {rock , paper , scissors}
+accident1 : rockPaperScissors(1) = 6 probabilities
+accident2 :rock-paper-scissors(2) = 12 probabilities
+accident3 rock-paper-scissors(3) = 36 probabilities 
+etc..*/
+ var OmegaElem = ["rock" , "paper" , "scissors" ];
+     accid = [];
+     accelem;
+     index;
+     i;
+     if (player > 0) {
+     	for (i = 0; i < OmegaElem.length; i++) {
+     		index = Math.floor(Math.random() * OmegaElem.length);
+
+     		return accid.push(accelem[index]);
+     	}
+     }
+}
+
+

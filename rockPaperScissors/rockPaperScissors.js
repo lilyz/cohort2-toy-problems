@@ -17,3 +17,16 @@
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
 */
+var arr=[];
+function game(){
+	
+	var r="rock"
+	var p="paper"
+	var s="scissors"
+		for(var i= 0; i<3; i++){
+			arr.push("rock")
+		}	
+
+return arr;
+}
+

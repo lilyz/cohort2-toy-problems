@@ -14,8 +14,25 @@
   * var anagrams = allAnagrams('abc');
   * console.log(anagrams); // [ 'abc', 'acb', 'bac', 'bca', 'cab', 'cba' ]
   */
+function fact(num){
+	var temp=1;
+	while(num>=1){
+		temp = temp * num;
+		num--;
+	}
+	return temp;
+}
 
 var allAnagrams = function(string) {
-	
-
+	//var flag=fact(string.length);
+	//var flag=100;
+	var temp=string.split("");
+	var tempArr=[];
+	while( fact(string.length) > tempArr.length   ){
+		var x = _.shuffle(temp).join("");
+		if( !_.contains(tempArr, x))
+			tempArr.push(x);
+		//flag--;
+	}
+	return tempArr;
 };

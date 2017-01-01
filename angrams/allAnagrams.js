@@ -16,6 +16,18 @@
   */
 
 var allAnagrams = function(string) {
-	
-
+	string=string.split('');
+	var obj={};
+	var result=[];
+	for (var i = 0; i < string.length; i++) {
+		obj[string[i]]=i;
+	}
+	for (var i in obj) {
+		for (var j in obj) {
+			for (var k in obj) {
+				result.push([i,j,k]);
+			}
+		}
+	}
+	return result;
 };

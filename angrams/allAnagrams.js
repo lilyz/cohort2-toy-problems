@@ -33,7 +33,7 @@ var allAnagrams = function(string) {
             arr1=[];
         }
         if (result.length===num){
-            i=num;
+            i=arr.length;
         }
         else { i=0}    
     } 
@@ -41,7 +41,7 @@ var allAnagrams = function(string) {
         
    
 
-};
+}
 
 
 

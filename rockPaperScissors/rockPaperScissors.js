@@ -21,11 +21,15 @@
 
 function generate () {
 	var newArr2 = ["rock", "paper", "scissors"];
-		var newArr1 = [];		
+		var newArr1 = [];
+		var newarr =[];
 		for(var i = 0; i<newArr2.length; i++) {
 			for (var x = 0; x < newArr2.length; x++) {
-				newArr1.push(newArr2[i]);
+				for (var j = 0; j < newArr2.length; j++) {
+				newArr1.push(newArr2[i],newArr2[x],newArr2[j]);
+				newarr.push(newArr1)
+				newArr1=[];
+				}
 			}
-		}
-		return newArr1;
-}
+		};
+		return newarr;

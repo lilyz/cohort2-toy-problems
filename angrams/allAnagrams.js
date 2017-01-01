@@ -19,7 +19,11 @@ var allAnagrams = function(string) {
 	var arr=string.split("");
 	var arr2=[];
 	var str="";
-	while(arr2.length!==arr.length*2){
+	var rval=1;
+    for (var i = 2; i <= arr.length; i++){
+        rval = rval * i;
+    }
+	while(arr2.length!==rval){
 		for (var i=0 ; i<arr.length;i++){
 			var rand = arr[Math.floor(Math.random() * arr.length)];
 			str+=rand;

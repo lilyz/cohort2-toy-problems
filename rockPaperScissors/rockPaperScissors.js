@@ -4,9 +4,9 @@ function rockPaperScissors(num){
    var arr=["rock","paper","scissors"]
    for(var i=0;i<Math.pow(num,num);i++){
    newarr.push(arr[Math.floor(Math.random() * arr.length)])
-   
+   newarr2.push(newarr)
    }
-   return newarr
+   return newarr2
 
 }
 

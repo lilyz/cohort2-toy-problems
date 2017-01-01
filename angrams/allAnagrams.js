@@ -16,6 +16,18 @@
   */
 
 var allAnagrams = function(string) {
+	var str=""
+	var x=string.split("")
+	var ar=[]
+	for(var i =0 ; i<x.length*2;i++){
+		for ( var j=0;j<=x.length;j++){
+		str += string.charAt(Math.floor(Math.random() *string.length));
+		ar.push(str)
+		if(x[i]===x[j]){
+		ar.pop()	
+	}
 	
-
+	}
+	}
+	return ar
 };

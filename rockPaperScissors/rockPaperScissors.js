@@ -17,25 +17,17 @@
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
 */
-var arr=[];
-function game(){
-	var ne=[];
-	var r="rock"
-	var p="paper"
-	var s="scissors"
-		 for(var i= 0; i<; i++){
-		    	arr.push(r)
-			   
-			for(var j=0; i<ne; i++){
-		     	arr.push(p)
-			    
-				for(var d= 0; i<27; i++){
-					arr.push(s)
-					ne.push(arr)
-				}
+var rpsThreeRounds = function() {
 
-			}
-		}	
+    var options = ['rock', 'paper', 'scissors'];
+    var results = [];
 
-return ne;
-}
+    for (var i = 0; i < options.length; i++) {
+        for (var j = 0; j < options.length; j++) {
+            for (var k = 0; k < options.length; k++) {
+                results.push([].concat(options[i], options[j], options[k]));
+            }
+        }
+    }
+    return JSON.stringify(results);
+};

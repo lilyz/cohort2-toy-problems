@@ -16,6 +16,18 @@
   */
 
 var allAnagrams = function(string) {
-	
-
+if (string.length < 2) {
+   return [string];
+ } else {
+     var result = [];
+     for (var i = 0; i < string.length; i++) {
+       var letter = string[i];
+       var shorterWord = string.substr(0, i) + string.substr(i + 1, string.length - 1);
+       var shortwordArray = allAnagrams(shorterWord);
+       for (var j = 0; j < shortwordArray.length; j++) {
+         result.push(letter + shortwordArray[j]);
+       }
+     }
+     return result;
+ }
 };

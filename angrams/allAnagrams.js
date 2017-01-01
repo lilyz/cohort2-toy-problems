@@ -14,21 +14,21 @@
   * var anagrams = allAnagrams('abc');
   * console.log(anagrams); // [ 'abc', 'acb', 'bac', 'bca', 'cab', 'cba' ]
   */
-function shuffle(arr) {
-  var currI = arr.length, Value, randI;
+// function shuffle(arr) {
+//   var currI = arr.length, Value, randI;
 
-  while (0 !== currI) {
+//   while (0 !== currI) {
 
-    randI = Math.floor(Math.random() * currI);
-    currI -= 1;
+//     randI = Math.floor(Math.random() * currI);
+//     currI -= 1;
 
-    Value = arr[currI];
-    arr[currI] = arr[randI];
-    arr[randI] = Value;
-  }
+//     Value = arr[currI];
+//     arr[currI] = arr[randI];
+//     arr[randI] = Value;
+//   }
 
-  return arr;
-}
+//   return arr;
+// }
 
 
 var lastArr = []

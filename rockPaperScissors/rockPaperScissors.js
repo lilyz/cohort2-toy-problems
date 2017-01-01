@@ -36,16 +36,16 @@ function generate(){
 for (var i=0;i<9;i++){
 	for(var j=0;j<3;j++){
   	var arr=["paper"];
-  	arr.push(round[1])
-  	arr.push(round[i+1])
+  	arr.push(round[i])
+  	arr.push(round[j])
   	result.push(arr);
 }
   	}
 for (var i=0;i<9;i++){
 	for(var j=0;j<3;j++){
   	var arr=["scissors"];
+  	arr.push(round[i])
   	arr.push(round[j])
-  	arr.push(round[i+1])
   	result.push(arr);
 
   	}

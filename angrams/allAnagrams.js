@@ -15,7 +15,21 @@
   * console.log(anagrams); // [ 'abc', 'acb', 'bac', 'bca', 'cab', 'cba' ]
   */
 
-var allAnagrams = function(string) {
-	
-
-};
+	var result=[];
+function allAnagrams(string,subStr) {
+	subStr=subStr||[]
+    if (typeof (string) === 'string'){
+    	string = string.split("");
+    }
+    if (string.length === 0){
+    	result.push(subStr.join(''));
+    }
+    for (var i = 0; i < string.length; i++) {
+        var x = string.splice(i, 1);
+        subStr.push(x);
+        allAnagrams(string, subStr);
+        subStr.pop();
+        string.splice(i, 0, x);
+    }
+    return result;
+}

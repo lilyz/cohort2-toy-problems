@@ -17,3 +17,17 @@
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
 */
+var rpsThreeRounds = function() {
+
+    var options = ['rock', 'paper', 'scissors'];
+    var results = [];
+
+    for (var i = 0; i < options.length; i++) {
+        for (var j = 0; j < options.length; j++) {
+            for (var k = 0; k < options.length; k++) {
+                results.push([].concat(options[i], options[j], options[k]));
+            }
+        }
+    }
+    return JSON.stringify(results);
+};

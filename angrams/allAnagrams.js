@@ -18,7 +18,7 @@
 var allAnagrams = function(string) {
 	var arr=string.split("");
 	var arr2=[];
-	var str="";
+	var str=""; 
 	var rval=1;
     for (var i = 2; i <= arr.length; i++){
         rval = rval * i;

@@ -17,3 +17,54 @@
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
 */
+
+
+function each(coll, f) {
+    if (Array.isArray(coll)) {
+       for (var i = 0; i < coll.length; i++) {
+           f(coll[i], i);
+       }
+    } else {
+       for (var key in coll) {
+           f(coll[key], key);
+       }
+    }
+}
+
+/*function rockPaperScissors2(n){
+	var x=[]
+	
+	var y=["rock","paper","scissors"]
+   each(y,function(ele){
+   		var getRandom = y[Math.floor(Math.random() * y.length)];
+	var z=getRandom
+	x.push(z)
+
+   })
+
+return x 
+
+}*/
+
+function rockPaperScissors(n){
+	var x=[]
+	
+	var y=["rock","paper","scissors"]
+	var length =Math.pow(y.length,n)
+
+  while(length!==0){
+  	for(var i=0;i<length;i++){
+  		x.push([y[i],y[i+1],y[i+2]])
+  		var temp=y.splice(i,1)
+  		//y.splice(2,0,temp)
+  		y.push(temp)
+
+  	} 
+  	return x  
+  }  
+
+
+}
+
+
+

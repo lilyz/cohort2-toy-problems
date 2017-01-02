@@ -26,5 +26,41 @@
 
  var balancedParens = function (input) {
 	
+ 	var para = "()";
+ 	var char;
+ 	var brackets = input.split("");
+ 	var ordered = [];
+
+
+ 	for (var i = 0; i < input.length; i++){
+ 		char = input[i];
+
+
+ 		if(para.indexOf(char)<0){
+ 			brackets.splice(i,1);
+ 			continue;
+ 		}
+
+ 		if(para.indexOf(char)%2 !== 0){
+ 			ordered.push("closed");
+ 		}
+ 		else{
+ 			ordered.push("open")
+ 		}
+
+
+ 	}
+
+ 	for (var i = 0; i < ordered.length; i++) {
+ 		ordered[i]
+ 	}
+ 
+	if (input.indexOf(")") > input.indexOf("("))
+		return true;
+	return false;
  };
+
+
+
+
 	

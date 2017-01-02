@@ -17,3 +17,23 @@
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
 */
+var throws=["rock","paper","scissors"]
+function rockPaperScissors(num){
+
+var result=[];
+for(var x=0; x<num; x++){
+	var arr=[];
+
+
+for(var i=0;i<throws.length;i++){
+	var rand= Math.floor(Math.random() * (2 - 0 + 1)); 
+	
+	arr.push(throws[rand]);
+	result.push(arr);
+}
+	
+}
+
+return result;
+
+}

@@ -10,6 +10,7 @@
 *    ["rock", "paper", "rock"],
              ...etc...
      ]
+
 *
 * Extra credit:
 *   - Make your function return answers for any number of rounds.
@@ -17,3 +18,24 @@
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
 */
+
+function RockPaperScissors(num){
+	var words=['Rock','Paper','scissors'];
+	var ran;
+	var arr=[];
+	var arr2=[];
+	for(var i=num; i>0;i--){
+
+		for (var i = 0; i < words.length; i++) {
+			var ran=words[Math.floor(Math.random()*words.length)]
+			arr.push(ran);
+ 		}
+ 		arr2.push(arr);
+	}
+
+return arr2;
+
+}
+
+
+ 

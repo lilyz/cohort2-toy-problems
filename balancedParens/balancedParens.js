@@ -24,7 +24,21 @@
  *	"())"
  */
 
+
  var balancedParens = function (input) {
-	
- };
-	
+ 	var parens = "[]{}()"
+ 	var arr = []
+ 	var character
+ 	var x;
+ 	for(var i = 0; character = input[i]; i++) {
+ 		x = parens.indexOf(character);
+ 		if(x % 2 === 0) {
+ 			arr.push(x + 1);
+ 		} else if(arr.length === 0 || arr.pop() !== x) {
+ 				return false;
+ 			}	
+ 	}
+ 	return arr.length === 0;
+ }
+ 
+ 

@@ -15,6 +15,7 @@
   * console.log(anagrams); // [ 'abc', 'acb', 'bac', 'bca', 'cab', 'cba' ]
   */
 
+<<<<<<< HEAD
 
 
 var allAnagrams = function(string) {
@@ -78,3 +79,9 @@ function check(arr,arrofchar){
 }
 
 
+=======
+var allAnagrams = function(string) {
+	
+
+};
+>>>>>>> 1f1731d548cef0fd354cd489d717a0c664b36245

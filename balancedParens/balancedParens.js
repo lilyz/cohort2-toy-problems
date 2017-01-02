@@ -23,8 +23,17 @@
  *
  *	"())"
  */
+ 
 
  var balancedParens = function (input) {
-	
+ 	var parentheses="()[]{}";
+ 	var arr=[];
+ 	var ch;
+ 	var position;
+ 	for(var i=0;ch=input[i];i++){
+ 		position=parentheses.indexOf(ch);
+
+ 		
+	 return true;
  };
 	

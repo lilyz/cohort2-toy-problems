@@ -19,8 +19,8 @@ var allAnagrams = function(string) {
     var x;
     var arr1=[];
     var result=[];
-    var arr=string.split("");
-    var num=arr.length*(arr.length-1);
+    var arr=string.split("");//uniq
+    var num=arr.length*(arr.length-1);///var num=arr.length*(arr.length)
     for (var i = 0; i < arr.length; i++) {
         x=Math.round(Math.random() * (arr.length-1));
         if (arr1.indexOf(arr[x])<0){

@@ -25,6 +25,41 @@
  */
 
  var balancedParens = function (input) {
-	
+	//var tempArr= input.match(/[\{\}"[\""\]""\(""\)"]/g).join("");
+	if((/[\{]/g).test(input))
+		var rightCurlBra=input.match(/[\{]/g).length ;
+	else
+		var rightCurlBra = -1;
+	if((/[\}]/g).test(input))
+		var 	leftCurlBra=input.match(/[\}]/g).length ;
+	else
+		var leftCurlBra = -2;
+
+	if((/["\["]/g).test(input))
+		var rightSquaBra=input.match(/["\["]/g).length ;
+	else
+		var rightSquaBra = -1;
+	if((/["\]"]/g).test(input))
+		var 	leftSquaBra=input.match(/["\]"]/g).length ;
+	else
+		var leftSquaBra = -2
+	if((/["\("]/g).test(input))
+		var rightBra=input.match(/["\("]/g).length ;
+	else
+		var rightBra = -1;
+	if((/["\)"]/g).test(input))
+		var 	leftBra=input.match(/["\)"]/g).length;
+	else
+		var leftBra = -2		
+
+	console.log(leftBra);
+	console.log(rightBra);console.log(leftSquaBra);console.log(rightSquaBra);console.log(leftCurlBra);console.log(rightCurlBra);
+	if(rightBra !== leftBra  )
+		return false;
+	else if(leftSquaBra !== rightSquaBra )
+		return false;
+	else if(leftCurlBra !== rightCurlBra)
+		return false;
+	return true;
  };
 	

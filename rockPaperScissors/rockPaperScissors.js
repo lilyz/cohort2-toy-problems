@@ -17,3 +17,29 @@
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
 */
+
+function rockPaperScissors(n){
+	//cross product method
+	var str=['rock', 'paper', 'scissors'];
+	n= n || 3; // if n undefined
+	var strings=[];
+		//generating n arrays to calculate cross prdouct
+		for (var i = 0; i < n; i++) {
+			strings.push(str);	
+		}
+	   var result = [], max = n-1;
+    function crossProduct(arr, i) {
+        for (var j=0; j<n; j++) { // looping on number of players
+            var a = arr.slice(0); // clone arr
+            a.push(strings[i][j]);
+            if (i==max)
+                result.push(a);
+            else
+                crossProduct(a, i+1);
+        }
+    }
+    crossProduct([], 0);
+    return result;
+}
+
+

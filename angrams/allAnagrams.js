@@ -15,6 +15,7 @@
   * console.log(anagrams); // [ 'abc', 'acb', 'bac', 'bca', 'cab', 'cba' ]
   */
 
+<<<<<<< HEAD
 // var allAnagrams = function(string) {
 // 	var arrCombinations, stringSliced, stringElement;
 // 	arrCombinations = []; stringSliced = shuffle(string);
@@ -79,3 +80,9 @@ var allAnagrams = function(string) {
 
 
 
+=======
+var allAnagrams = function(string) {
+	
+
+};
+>>>>>>> 1f1731d548cef0fd354cd489d717a0c664b36245

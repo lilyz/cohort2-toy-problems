@@ -35,28 +35,28 @@ return ciriar
   //////////////////////////////////////////////////////////////////////////////////////////////////////////
                                                                       //  A2
   //////////////////////////////////////////////////////////////////////////////////////////////////////////
-// function allang(str){
-// 	if(str.length<2){
-// 		return str
-// 	}
-// 	var arr=[]
-// 	var world;
-// 	var selc;
-// 	var aft;
-// 	for(var i=0;i<str.length;i++){
-// 		 world=str[i]
-// 		 // selc=str.slice(0,i)
-// 		 // aft=str[i+1]
-// 		 // arr=allang(world,aft,selc)
-// 		 woo=str.substr(0,i)+str.supstr(i+1,str.length-1)
-// 		myin=allang(woo)
-// 		for(var j=0;j<myin.length;i++){
-// 			arr.push(world+myin[j])
-// 		}
-// 	}
+function allang(str){
+	if(str.length<2){
+		return [str]
+	}
+	var arr=[]
+	var world;
+	var selc;
+	var aft;
+	for(var i=0;i<str.length;i++){
+		 world=str[i]
+		 // selc=str.slice(0,i)
+		 // aft=str[i+1]
+		 // arr=allang(world,aft,selc)
+		 woo=str.substr(0,i)+str.supstr(i+1,str.length-1)
+		myin=allang(woo)
+		for(var j=0;j<myin.length;i++){
+			arr.push(world+myin[j])
+		}
+	}
 
-// 	return arr
-// }
+	return arr
+}
   //////////////////////////////////////////////////////////////////////////////////////////////////////////
                                                                      //   from internet
   //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -73,7 +73,8 @@ return ciriar
   				allAnswers.push(letter + shortwordArray[j]);
   			}
   		}
-  		return allAnswers;
+  		return a
+  		+llAnswers;
   	}
   }
   //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -93,7 +94,18 @@ return ciriar
   	return arr
   }
 
-
+function allavg(str){
+  var string=stringv
+  var arr=[]
+  for(var i=0<str.length;i++){
+    for(var k=0;k<string.length;k++){
+    str=str.split("")
+    str[i]=string[k]
+    arr.push(str[i])
+    }
+  }
+  return arr
+}
 
 
 

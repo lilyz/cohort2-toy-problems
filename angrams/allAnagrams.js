@@ -16,6 +16,7 @@
   */
 
 var allAnagrams = function(string) {
+<<<<<<< HEAD
 	var arr=[];
 	var x=string.split("");
 	function anagrams (str){
@@ -37,5 +38,8 @@ var allAnagrams = function(string) {
 		return JSON.stringify(arr);
 	}
 	return anagrams(string);
+=======
+	
+>>>>>>> 1f1731d548cef0fd354cd489d717a0c664b36245
 
 };

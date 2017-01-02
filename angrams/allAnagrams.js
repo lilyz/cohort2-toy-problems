@@ -14,6 +14,7 @@
   * var anagrams = allAnagrams('abc');
   * console.log(anagrams); // [ 'abc', 'acb', 'bac', 'bca', 'cab', 'cba' ]
   */
+<<<<<<< HEAD
 var allAnagrams = function(string) {
 
   var arr=string.split("")
@@ -28,3 +29,10 @@ var allAnagrams = function(string) {
  
 
 };
+=======
+
+var allAnagrams = function(string) {
+	
+
+};
+>>>>>>> 1f1731d548cef0fd354cd489d717a0c664b36245

@@ -22,7 +22,7 @@ var allAnagrams = function(string) {
 
 	for(var i = 0; i < str.length; i++){
 		str[i] = str[index]
-		str.splice(i,1)
+		
 	}
 	return str.join()
 

@@ -17,3 +17,56 @@
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
 */
+
+  function rockPaperScissors(n, list, round) {  
+  list = list || [];
+  round = round || [];
+  var choices = ['rock', 'paper', 'scissors'];
+
+  if (n === 0) { 
+  	return list.push(round.slice()); 
+  }
+
+  for (var i = 0; i < 3; i++) {
+    round.push(choices[i]);
+    rockPaperScissors(n-1, list, round);
+    round.pop();
+  }
+  return list;
+}
+    
+
+
+function rps(){
+	var r=[]
+	var choices=['rock','paper','scissors']
+	for(var i=0;i<choices.length;i++){
+		for(var j=0;j<choices.length;j++){
+			for(var h=0;h<choices.length;h++){
+				r.push(choices[i],choices[j],choices[h])
+			}
+		}
+	}
+	return r
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

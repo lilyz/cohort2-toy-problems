@@ -19,6 +19,8 @@
 *
 */
 
+
+
 function RockPaperScissors(num){
 	var words=['Rock','Paper','scissors'];
 	var ran;

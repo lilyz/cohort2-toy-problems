@@ -15,5 +15,21 @@
 *   - Make your function return answers for any number of rounds.
 * Example:
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
+
 *
 */
+
+function rockPaperScissors(n){
+	var newArr= new Array(n);
+	var Arr1=["rock","paper","scissors"];
+	for (var i = 0; i < newArr.length; i++) {
+		newArr[i]=Arr1[0]+= " "+Arr1[i]
+		// Arr1.splice(i,1)
+		
+	}
+	return newArr;
+}
+
+
+
+

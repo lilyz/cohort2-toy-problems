@@ -17,3 +17,12 @@
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
 */
+
+function rockPaperScissors (){
+	narr = ["paper", "rock", "scissors"]
+	result = []
+	for(var i = 0; i <= 27; i++){
+	result.push(narr[Math.floor(Math.random() * 3)] + " " + narr[Math.floor(Math.random() * 3)] + " " + narr[Math.floor(Math.random() * 3)])
+}
+return result
+}

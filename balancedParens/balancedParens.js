@@ -21,10 +21,38 @@
  * balancedParens(' var wow  = { yo: thisIsAwesome() }'); // true
  * balancedParens(' var hubble = function() { telescopes.awesome();'); // false
  *
- *	"())"
+ *  "())"
  */
 
  var balancedParens = function (input) {
-	
+    var open=0;
+    var close=0;
+    if (input.indexOf(")")===0 ||input.indexOf("}")===0 ||input.indexOf("]")===0){
+      return false;
+    }
+
+    for (var i=0; i<input.length;i++){
+
+      if (input[i]==="(" && input[i+1]==="}" || input[i]==="(" && input[i+1]==="]"){
+        return false;
+      }
+      else if(input[i]==="{" && input[i+1]===")" || input[i]==="(" && input[i+1]==="]"){
+        return false;
+      }
+      else if (input[i]==="[" && input[i+1]===")" || input[i]==="(" && input[i+1]==="}"){
+        return false;
+      }
+      else if (input[i]==="(" || input[i]==="{" || input[i]==="["){
+        open+=1;
+      }
+      else if (input[i]===")" || input[i]==="}" || input[i]==="]"){
+        close+=1;
+      }
+    }
+      if (close===open){
+      return true;
+      }
+      else{return false}
+
  };
-	
+  

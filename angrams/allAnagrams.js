@@ -24,15 +24,12 @@ function fact(num){
 }
 
 var allAnagrams = function(string) {
-	//var flag=fact(string.length);
-	//var flag=100;
 	var temp=string.split("");
 	var tempArr=[];
 	while( fact(string.length) > tempArr.length   ){
 		var x = _.shuffle(temp).join("");
 		if( !_.contains(tempArr, x))
 			tempArr.push(x);
-		//flag--;
 	}
 	return tempArr;
 };

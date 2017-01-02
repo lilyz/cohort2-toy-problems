@@ -17,3 +17,15 @@
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
 */
+function plyer (n){
+    var ar=["rock","paper","scissors"]
+    var newarr=[]
+    var array=[]
+    for ( var i =0 ; i< ar.length; i++){
+        for ( var j=0 ; j<n ; j++){
+    newarr.push(Math.random(i.toString()))
+}
+array.push (newarr)
+}
+return array
+}

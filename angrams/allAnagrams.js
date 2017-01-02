@@ -16,9 +16,10 @@
   */
 
 var allAnagrams = function(string) {
+<<<<<<< HEAD
 	var arr=string.split("");
 	var arr2=[];
-	var str="";
+	var str=""; 
 	var rval=1;
     for (var i = 2; i <= arr.length; i++){
         rval = rval * i;
@@ -43,4 +44,8 @@ var allAnagrams = function(string) {
 		str="";
 	}
 	return arr2;
+=======
+	
+
+>>>>>>> 1f1731d548cef0fd354cd489d717a0c664b36245
 };

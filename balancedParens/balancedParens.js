@@ -24,7 +24,40 @@
  *	"())"
  */
 
- var balancedParens = function (input) {
-	
- };
-	
+
+ // recursion solution but fixed with () and with no chars.
+ // var balancedParens = function (input) {
+ // 	if(input===""){
+ // 		return true;
+ // 	}
+ // 	if(input.split("()").join('')===input){
+ // 		return false;
+ // 	}
+ // 	let result=balancedParens(input.split("()").join(''));
+ // 	return result;
+ // }
+
+ var balancedParens = function (input, brackets=['()','[]','{}']) {
+ 	let obj={
+ 		"(":0,
+ 		")":0,
+ 		"[":0,
+ 		"]":0,
+ 		"{":0,
+ 		"}":0
+ 	}
+ 	for(let k in brackets){	
+ 		for(let i in input){
+ 			if(input[i]===brackets[k][0]){
+ 				obj[brackets[k][0]]+=1;
+ 			}
+ 			if(input[i]===[k][1] && obj[brackets[k][1]]===obj[brackets[k][0]]){
+ 				return false
+ 			}
+ 			if(input[i]===brackets[k][1]){
+ 				obj[brackets[k][1]]+=1;
+ 			}
+ 		}
+ 	}
+ 	return (obj[brackets[0][0]]===obj[brackets[0][1]] && obj[brackets[1][0]]===obj[brackets[1][1]] && obj[brackets[2][0]]===obj[brackets[2][1]]) ? true : false;
+ }

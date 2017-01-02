@@ -17,3 +17,26 @@
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
 */
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*
+                                                             /*not all frome me/*
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+function game(){
+	var arr=["rock","paper","scissors"]
+var ciriar=[]
+for(var i=0;i<arr.length;i++){
+	for(var j=0;j<arr.length;j++){
+		for(var s=0;s<arr.length;s++){
+			ciriar.push(arr[i],arr[j],arr[s])
+		}
+	}
+}
+return ciriar 
+}
+// function game(){
+// 	var arr=["rock","rock","rock"]
+// 	var arr2=["scissors","scissors","scissors"]
+// 	var arr3=["paper","paper","paper"]
+//      for(var i = 0 ; i<arr.length;i++){
+
+//      }
+// }

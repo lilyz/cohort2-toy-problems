@@ -21,10 +21,28 @@
  * balancedParens(' var wow  = { yo: thisIsAwesome() }'); // true
  * balancedParens(' var hubble = function() { telescopes.awesome();'); // false
  *
- *	"())"
+ *  "())"
  */
 
- var balancedParens = function (input) {
-	
- };
-	
+function balancedParens(input){
+  var  parens
+   var index;
+  var result = [];
+  var oBracet = ['[', '{', '('];
+  var cBracet = [']', '}', ')'];
+  for (var i = 0; i < input.length; i++) {
+    parens = input[i];
+    if (oBracet.indexOf(parens) > -1) {
+      result.push(parens);
+    } else if (cBracet.indexOf(parens) > -1) {
+      index = oBracet[cBracet.indexOf(parens)];
+      if (result.length === 0 || (result.pop() !== index)) {
+        return false;
+      }
+    } else {
+      continue;
+    }
+  }
+  return true;
+}
+  

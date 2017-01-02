@@ -16,6 +16,7 @@
   */
 
 var allAnagrams = function(string) {
+<<<<<<< HEAD
 	var arr = []
 	var str = string.split ("")
 	var index = Math.floor(Math.random() * str.length -1)
@@ -27,3 +28,8 @@ var allAnagrams = function(string) {
 	return str.join()
 
 };
+=======
+	
+
+};
+>>>>>>> 1f1731d548cef0fd354cd489d717a0c664b36245

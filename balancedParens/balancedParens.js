@@ -25,6 +25,21 @@
  */
 
  var balancedParens = function (input) {
-	
- };
-	
+ 	let p="[](){}"
+ 	ar= [],
+    char, position;
+	for(let i = 0 ;char=input[i]; i++){
+		position=p.indexOf(char);
+		if(position===-1){
+			continue
+		}
+		if(position%2===0){
+			ar.push(position+1)
+		}
+		else{
+			if(ar.length===0||ar.pop()!==position){
+				return false
+		}
+	}
+}
+}

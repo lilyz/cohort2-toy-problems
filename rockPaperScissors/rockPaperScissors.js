@@ -25,10 +25,10 @@ accident2 :rock-paper-scissors(2) = 12 probabilities
 accident3 rock-paper-scissors(3) = 36 probabilities 
 etc..*/
  var OmegaElem = ["rock" , "paper" , "scissors" ];
-     accid = [];
-     accelem;
-     index;
-     i;
+ var    accid = [];
+     var accelem;
+    var  index;
+      var i;
      if (player > 0) {
      	for (i = 0; i < OmegaElem.length; i++) {
      		index = Math.floor(Math.random() * OmegaElem.length);

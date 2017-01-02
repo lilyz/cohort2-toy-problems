@@ -17,3 +17,32 @@
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
 */
+
+
+Array.prototype.insert = function (index, item) {
+  this.splice(index, 0, item);
+};
+
+
+function permute(arr){
+	var possibleArr = arr;
+	var hold;
+	var result=[];
+	var numOfPoss = Math.pow(arr.length+1,arr.length+1);
+	for (var i = 0; i < numOfPoss; i++) {
+		var possibleArr = arr;
+		
+		if(i%arr.length == 0){
+			for (var j = i; j < arr.length; j++) {
+				
+				possibleArr.splice(j,1);
+				possibleArr.insert(j,arr[i]);	
+			}
+
+			result.push(possibleArr);
+		}
+		
+	}
+
+	return result;
+}

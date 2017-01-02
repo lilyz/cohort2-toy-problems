@@ -17,3 +17,15 @@
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
 */
+function rock (){
+  var arr = [];
+  var newarr = ['rock', 'paper', 'scissors'];
+  for (var i = 0; i < newarr.length; i++) {
+    for (var l = 0; l < newarr.length; l++) {
+      for (var x = 0; x < newarr.length; x++) {
+        arr.push([newarr[i], newarr[l], newarr[x]]);
+      }
+    }
+  }
+  return arr;
+}

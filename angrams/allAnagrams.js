@@ -16,14 +16,20 @@
   */
 
 var allAnagrams = function(string) {
+<<<<<<< HEAD
 	var arr = []
 	var str = string.split ("")
 	var index = Math.floor(Math.random() * str.length -1)
 
 	for(var i = 0; i < str.length; i++){
 		str[i] = str[index]
-		str.splice(i,1)
+		
 	}
 	return str.join()
 
 };
+=======
+	
+
+};
+>>>>>>> 1f1731d548cef0fd354cd489d717a0c664b36245

@@ -16,30 +16,24 @@
   */
 
 var allAnagrams = function(string) {
-<<<<<<< HEAD
-	var arr=[];
-	var x=string.split("");
-	function anagrams (str){
-
-	if(string.length<=1){
-		arr.push(string);
-	}
-	else{
-		for (var i = 0; i < string.length; i++) {
-			for (var j = 0; j < x.length; j++) {
-				arr.push([].concat(string[i],x[j],x[i]));
-			}
-
-				
-			}
-			string=(string.slice(i+1,string.length));
-			i--;
-		}
-		return JSON.stringify(arr);
-	}
-	return anagrams(string);
-=======
-	
->>>>>>> 1f1731d548cef0fd354cd489d717a0c664b36245
+  var arr=string.split('');
+  var array=[];
+  var bigArray=[];
+  var l =arr.length;
+  for (var i = 0; ; i++) {
+    for (var j = 0; j < arr.length; j++) {
+      var x = Math.floor(Math.random() * arr.length)
+      array.push(arr[x]);
+    }
+    var x=array.join("");
+    if (bigArray.indexOf(x) === -1 ) {
+      bigArray.push(x)
+      array=[];
+    }
+    if(bigArray.length === Math.pow(l,l)){
+      return bigArray;
+    }
+    array=[];
+}
 
 };

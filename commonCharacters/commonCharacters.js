@@ -13,9 +13,10 @@
 //Works for any number of input strings:
 var commonCharacters = function(string1, string2) {
 
+	var arr= Array.from(arguments);
 	var temp='';
-	string1.replace(" ","").split("").map(function(elem, index){
-		if(string2.includes(elem) && !temp.includes(elem))
+	arr.join("").replace(" ","").split("").map(function(elem){
+		if( arr.join("").replace(" ","").match(new RegExp(elem,'g')).length === arr.length && !temp.includes(elem))
 		   temp+=elem;
 	})
 	return temp;

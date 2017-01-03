@@ -17,7 +17,10 @@ var commonCharacters = function(string1, string2) {
   var result=[];
   for(var i=0;i<str1.length;i++){
   	if(string2.indexOf(str1[i])>-1 &&str1[i]!==" "){
-  		result.push(str1[i]);
+  		if(result.join("").indexOf(str1[i])==-1){
+  			result.push(str1[i]);
+  		}
+  		
   	}
   }
   return result.join("");

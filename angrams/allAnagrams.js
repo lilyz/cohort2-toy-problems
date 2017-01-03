@@ -16,18 +16,14 @@
   */
 
 
-var allAnagrams = function(string) {
-    var ne=string.split("")
-    var res=[];
-    for(var i=0; i<ne.length; i++){
-        for(var j=0; i<ne.length; j++){
-            for(var s=0; s<ne.length; s++){
-                if ( !ne[i]+ne[j]+ne[s].includes(res)){
-                    res.push(ne[i]+ne[j]+ne[s])
-                }
-                
-            }
-        }
+function getCombinations(chars) {
+  var result = [];
+  var f = function(prefix, chars) {
+    for (var i = 0; i < chars.length; i++) {
+      result.push(prefix + chars[i]);
+      f(prefix + chars[i], chars.slice(i + 1));
     }
-    return res;
-};
+  }
+  f('', chars);
+  return result;
+}

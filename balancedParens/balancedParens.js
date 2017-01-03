@@ -24,7 +24,10 @@
  *	"())"
  */
 
+
+//  First function to q1 +q2 only;
  var balancedParens = function (input) {
+
 	var x;
 	var str=""
 	var bool;
@@ -44,4 +47,3 @@
 	}
 	bool= true;
 };
-	

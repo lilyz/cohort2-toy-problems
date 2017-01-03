@@ -12,6 +12,12 @@
 
 //Works for any number of input strings:
 var commonCharacters = function(string1, string2) {
-  
+
+	var temp='';
+	string1.replace(" ","").split("").map(function(elem, index){
+		if(string2.includes(elem) && !temp.includes(elem))
+		   temp+=elem;
+	})
+	return temp;
 };
 

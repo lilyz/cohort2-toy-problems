@@ -16,6 +16,7 @@
   */
 
 var allAnagrams = function(string) {
+
 if (string.length < 2) {
    return [string];
  } else {
@@ -31,3 +32,4 @@ if (string.length < 2) {
      return result;
  }
 };
+ 

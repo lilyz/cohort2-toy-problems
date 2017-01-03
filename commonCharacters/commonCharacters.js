@@ -18,13 +18,12 @@ var commonCharacters = function(string1, string2) {
 	for (var i = 0; i < string1.length; i++) {
 		for (var j = 0; j < string2.length; j++) {
 			if(string1[i] === string2[j] && string1[i] && string2[j] !== " "){
-				
-					str+=string1[i]
+					str+=(string1[i])
 				}
 			  
 		}
 	}
-	return str;
+	return _.uniq(str).join("");
 };
 
 

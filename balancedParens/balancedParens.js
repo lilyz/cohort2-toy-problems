@@ -24,7 +24,10 @@
  *	"())"
  */
 
+
+//  First function to q1 +q2 only;
  var balancedParens = function (input) {
+<<<<<<< HEAD
 	//var tempArr= input.match(/[\{\}"[\""\]""\(""\)"]/g).join("");
 	if((/[\{]/g).test(input))
 		var rightCurlBra=input.match(/[\{]/g).length ;
@@ -61,5 +64,41 @@
 	else if(leftCurlBra !== rightCurlBra)
 		return false;
 	return true;
+=======
+  var c=input.length/2;
+  for (var i = 0; i < c; i++) {
+    input=input.replace("()",'');
+    input=input.replace("[]",'');
+    input=input.replace("{}",'');
+
+  }
+  console.log(input)
+  return input =='' ;
+
+>>>>>>> 6568bbd23274e6102779dd33ae75e4ed66b62768
  };
-	
+ //second function for all cases
+ function balancedParens(input) {
+  var parentheses = "[]{}()",
+  array = [];
+  var character; 
+  var bracePosition;
+
+  for(var i = 0; character = input[i]; i++) {
+    bracePosition = parentheses.indexOf(character);
+
+    if(bracePosition === -1) {
+      continue;
+    }
+
+    if(bracePosition % 2 === 0) {
+      array.push(bracePosition + 1); 
+    } else {
+      if(array.length === 0 || array.pop() !== bracePosition) {
+        return false;
+      }
+    }
+  }
+
+  return array.length === 0;
+}

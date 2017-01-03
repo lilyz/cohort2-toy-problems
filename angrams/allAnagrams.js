@@ -16,6 +16,7 @@
   */
 
 var allAnagrams = function(string) {
+<<<<<<< HEAD
 	var str=""
 	var x=string.split("")
 	var ar=[]
@@ -31,3 +32,27 @@ var allAnagrams = function(string) {
 	}
 	return ar
 };
+=======
+  var arr=string.split('');
+  var array=[];
+  var bigArray=[];
+  var l =arr.length;
+  for (var i = 0; ; i++) {
+    for (var j = 0; j < arr.length; j++) {
+      var x = Math.floor(Math.random() * arr.length)
+      array.push(arr[x]);
+    }
+    var x=array.join("");
+    if (bigArray.indexOf(x) === -1 ) {
+      bigArray.push(x)
+      array=[];
+    }
+    if(bigArray.length === Math.pow(l,l)){
+      return bigArray;
+    }
+    array=[];
+}
+
+
+};
+>>>>>>> 6568bbd23274e6102779dd33ae75e4ed66b62768

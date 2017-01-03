@@ -33,7 +33,7 @@
 	if((/[\}]/g).test(input))
 		var 	leftCurlBra=input.match(/[\}]/g).length ;
 	else
-		var leftCurlBra = -2;
+		var leftCurlBra = -1;
 
 	if((/["\["]/g).test(input))
 		var rightSquaBra=input.match(/["\["]/g).length ;
@@ -42,7 +42,7 @@
 	if((/["\]"]/g).test(input))
 		var 	leftSquaBra=input.match(/["\]"]/g).length ;
 	else
-		var leftSquaBra = -2
+		var leftSquaBra = -1;
 	if((/["\("]/g).test(input))
 		var rightBra=input.match(/["\("]/g).length ;
 	else
@@ -50,7 +50,7 @@
 	if((/["\)"]/g).test(input))
 		var 	leftBra=input.match(/["\)"]/g).length;
 	else
-		var leftBra = -2		
+		var leftBra = -1;		
 
 	console.log(leftBra);
 	console.log(rightBra);console.log(leftSquaBra);console.log(rightSquaBra);console.log(leftCurlBra);console.log(rightCurlBra);

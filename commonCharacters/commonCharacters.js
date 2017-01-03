@@ -12,6 +12,26 @@
 
 //Works for any number of input strings:
 var commonCharacters = function(string1, string2) {
-  
+  var arr=string1 + string2
+  var array=arr.split("")
+  var newstr=""
+  for(var i=0;i<array.length;i++){
+    if((newstr.split(array[i]).length -1 ) ===0){
+       newstr+=array[i]
+          }
+  }
+  return newstr
 };
-
+/////////////////////////*
+var commonCharacters1 = function() {
+var args = Array.prototype.slice.call(arguments)
+args=args.join("")
+  var array=args.split("")
+  var newarr=""
+   for(var i=0;i<array.length;i++){
+    if((newarr.split(array[i]).length -1 )===0){
+      newarr+=array[i]
+    }
+  }
+  return newarr
+};

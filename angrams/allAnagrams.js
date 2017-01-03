@@ -21,12 +21,12 @@ var allAnagrams = function(string) {
 			newArray.push(str1)
 		}
 		for (var i = 0; i < str2.length; i++) {
-			 withadd= str1+str2[i]; 
-			 afteradd=str2.slice(0,i)+ str2.slice(i+1);
+			withadd= str1+str2[i]; 
+			afteradd=str2.slice(0,i)+ str2.slice(i+1);
 			anagrams(withadd, afteradd) 
 		}
 	};
 	anagrams ("", string)
 	return newArray ; 
 };
-  
+

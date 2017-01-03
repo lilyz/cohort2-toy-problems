@@ -12,16 +12,15 @@
 
 //Works for any number of input strings:
 var commonCharacters = function(string1,string2) {
-	var s=string1+string2
 	var r=''
-	for(var i=0;i<s.length;i++){
-		if(r.indexOf(s[i])<0){
-			r+=s[i]
+	for(var i=0;i<string1.length;i++){
+		for(var j=0;j<string2.length;j++){
+			if(string1[i]===string2[j]){
+				r+=string1[i]
+			}
 		}
 	}
 	return r
-
- 
 }
 
-
+ 

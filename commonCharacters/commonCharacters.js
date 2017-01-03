@@ -17,8 +17,7 @@ var commonCharacters = function(string1, string2) {
 	var str ="";
 	for (var i = 0; i < string1.length; i++) {
 		for (var j = 0; j < string2.length; j++) {
-			// if( !(string1&&string2).includes("@?!") )i make this statement but dosen't work;
-			if(string1[i] === string2[j] && string1[i] && string2[j] !== " " && string1[i] && string2[j] !== "@" && string1[i] && string2[j] !== "!" && string1[i] && string2[j] !== "?"){
+			if(string1[i] === string2[j] && string1[i] && string2[j] !== " "){
 				
 					str+=string1[i]
 				}

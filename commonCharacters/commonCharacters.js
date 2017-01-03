@@ -12,6 +12,38 @@
 
 //Works for any number of input strings:
 var commonCharacters = function(string1, string2) {
-  
+var arr=string1.split('');
+var arr2=string2.split('');
+var array =[];
+var length = Math.max(arr.length,arr2.length)
+var lengthm = Math.min(arr.length,arr2.length)
+for (var i = 0; i < length; i++) {
+	for (var j = 0; j < lengthm; j++) {
+		if (arr[j]=== arr2[i] && array.indexOf(arr[j])=== -1){
+			array.push(arr[j])
+		}
+	}
+}
+return array.join('');
 };
+// in case multiple parameter as string 
+//I used arguments as parameter and compare first parameter with second one 
+// then comare the result with new parameter and etc..
+function common (arguments){
+	for (var i = 0; i < arguments.length; i++) {
+		var arr=arguments[i].split('');
+		var arr2=arguments[i+1].split('');
+		var array =[];
+var length = Math.max(arr.length,arr2.length)
+var lengthm = Math.min(arr.length,arr2.length)
+for (var i = 0; i < length; i++) {
+	for (var j = 0; j < lengthm; j++) {
+		if (arr[j]=== arr2[i] && array.indexOf(arr[j])=== -1){
+			array.push(arr[j])
+		}
+	}
+}
 
+	}
+return array; 
+}

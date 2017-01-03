@@ -38,7 +38,7 @@
 	
  // var middleSec = (input.length / 2) - 1;
 	// if (input.charAt(middleSec) === input.charAt(middleSec + 1))
-
+//
  var balancedParens = function (input) {
  	var stack, openMap, closeMap;
   stack = [];

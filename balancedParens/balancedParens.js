@@ -22,8 +22,7 @@
  * balancedParens(' var hubble = function() { telescopes.awesome();'); // false
  *
  *	"())"
- */
-
+*/
 var balancedParens = function (input) {
    var flag
    var arr=input

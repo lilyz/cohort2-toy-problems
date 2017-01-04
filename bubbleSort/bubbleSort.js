@@ -30,7 +30,23 @@
 
 // Feel free to add helper functions if needed
 
+
+
+
 var bubbleSort = function(array) {
+  var temp;
+  for (var j=0;j<=1;j++){
+    for (var i=0;i<array.length;i++){
+      if (array[i]>array[i+1]){
+        temp=array[i];
+        array[i]=array[i+1]                    //O(n^2)
+        array[i+1]=temp;
+        j=0;
+        i++;
+      }
+    }
+  }
+  return array;
   
 };
 

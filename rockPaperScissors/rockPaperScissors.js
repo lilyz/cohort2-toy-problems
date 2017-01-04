@@ -17,6 +17,7 @@
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
 */
+<<<<<<< HEAD
 function rsp(n){
 	var x=['rock','scissors','paper'];
 	if(n>3){
@@ -40,5 +41,23 @@ function f(n){
 	for(var i=0;i<n;i++){
 		console.log(sahar(n));
 	}
+=======
+function rockPaperScissors(number){
+  var array =[];
+  var array2 =["rock","paper","scissors"]
+  var bigArray=[];
+  array.length=3;
+  bigArray.length=number;
+  	if (number > 0) {
+  		for (var i = 0; i < array.length; i++) {
+	    	var x=Math.floor(Math.random() * array2.length)
+    		array.push(array2[x])
+  		}
+  			if (bigArray.indexOf(array) === -1) {
+  				bigArray.push(array)
+  			}
+  	}	
+  return bigArray + rockPaperScissors(number-1);
+>>>>>>> cba0403161af1b52cd68471d7804b98f26a4bf23
 }
 

@@ -12,7 +12,7 @@
 
 //Works for any number of input strings:
 var commonCharacters = function(string1, string2) {
-
+	
 	var arr= Array.from(arguments);
 	var temp='';
 	arr.join("").replace(" ","").split("").map(function(elem){

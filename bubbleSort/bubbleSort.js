@@ -31,8 +31,33 @@
 // Feel free to add helper functions if needed
 
 var bubbleSort = function(array) {
+	var temp;
+	for(var i=0;i<array.length;i++){
+		for(var j=0;j<array.length;j++){
+			if(array[j]>array[j+1]){
+				temp=array[j]
+				array[j]=array[j+1]
+				array[j+1]=temp
+			}
+		}
+	}
+	return (array)
   
 };
+	var array = [2, 5, 9];
+function bubl (array){
+	var arr=[];
+	var min1=Math.min(...array)
+	arr.push(min1)
+	var index = array.indexOf(min1);
+	if (index > -1) {
+    array.splice(index, 1);
+	}
+	if(array.length!==0){
+	bubl(array)
+	}
+	return array
+}
 
 /*
 

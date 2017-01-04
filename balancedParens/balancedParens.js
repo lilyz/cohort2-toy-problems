@@ -25,7 +25,10 @@
  */
  
 
+
+//  First function to q1 +q2 only;
  var balancedParens = function (input) {
+
  	var parentheses="()[]{}";
  	var arr=[];
  	var ch;
@@ -35,5 +38,30 @@
 
  		
 	 return true;
+
  };
-	
+ //second function for all cases
+ function balancedParens(input) {
+  var parentheses = "[]{}()",
+  array = [];
+  var character; 
+  var bracePosition;
+
+  for(var i = 0; character = input[i]; i++) {
+    bracePosition = parentheses.indexOf(character);
+
+    if(bracePosition === -1) {
+      continue;
+    }
+
+    if(bracePosition % 2 === 0) {
+      array.push(bracePosition + 1); 
+    } else {
+      if(array.length === 0 || array.pop() !== bracePosition) {
+        return false;
+      }
+    }
+  }
+
+  return array.length === 0;
+}

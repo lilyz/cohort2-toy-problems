@@ -29,21 +29,42 @@ return array.join('');
 // in case multiple parameter as string 
 //I used arguments as parameter and compare first parameter with second one 
 // then comare the result with new parameter and etc..
-function common (arguments){
-	for (var i = 0; i < arguments.length; i++) {
-		var arr=arguments[i].split('');
-		var arr2=arguments[i+1].split('');
-		var array =[];
-var length = Math.max(arr.length,arr2.length)
-var lengthm = Math.min(arr.length,arr2.length)
-for (var i = 0; i < length; i++) {
-	for (var j = 0; j < lengthm; j++) {
-		if (arr[j]=== arr2[i] && array.indexOf(arr[j])=== -1){
-			array.push(arr[j])
-		}
-	}
-}
+// function common (arguments){
+// 	for (var i = 0; i < arguments.length; i++) {
+// 		var arr=arguments[i].split('');
+// 		var arr2=arguments[i+1].split('');
+// 		var array =[];
+// var length = Math.max(arr.length,arr2.length)
+// var lengthm = Math.min(arr.length,arr2.length)
+// for (var i = 0; i < length; i++) {
+// 	for (var j = 0; j < lengthm; j++) {
+// 		if (arr[j]=== arr2[i] && array.indexOf(arr[j])=== -1){
+// 			array.push(arr[j])
+// 		}
+// 	}
+// }
 
-	}
-return array; 
+// 	}
+// return array; 
+// }
+function common (x,y){
+var args = Array.from(arguments);
+var array=[];
+var newArray=[];
+var count =0;
+for (var i = 0; i < arguments.length; i++) {
+	array +=arguments[i].split(',');
+	console.log(array);
+}
+for (var i = 0; i < array.length; i++) {
+	for (var j = 0; j < array.length; j++) {
+	  	array[j] === array [i];
+	  	//console.log(array[i])
+	  	count ++;
+	  }
+	  if (count > ) {
+	  	newArray.push(array[i]);
+	  }  
+}
+return newArray.join('');
 }

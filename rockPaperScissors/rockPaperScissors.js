@@ -17,32 +17,22 @@
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
 */
-	function rockPaperScissors(){
-		var x=["rock","paper","scissors"];
-		var result=[];
 
-		for (var i = 0; i < x.length; i++) {
-			for (var j = 0; j < x.length; j++) {
-				for (var k = 0; k < x.length; k++) {
-					 result.push([].concat(x[i],x[j],x[k]));
-				}
-			}
-		}
-		return JSON.stringify(result);
-		
+function rockPaperScissors(number){
+  var array =[];
+  var array2 =["rock","paper","scissors"]
+  var bigArray=[];
+  array.length=3;
+  bigArray.length=number;
+  	if (number > 0) {
+  		for (var i = 0; i < array.length; i++) {
+	    	var x=Math.floor(Math.random() * array2.length)
+    		array.push(array2[x])
+  		}
+  			if (bigArray.indexOf(array) === -1) {
+  				bigArray.push(array)
+  			}
+  	}	
+  return bigArray + rockPaperScissors(number-1);
+}
 
-	}
-	function roPaSc(n){
-		var x=["rock","paper","scissors"];
-		var result=[];
-		if(n===0){
-			 result.push([].concat(rockPaperScissors()));
-			 return result;
-
-		}
-		else {
-			return roPaSc(n-1);
-		}
-
-
-	}

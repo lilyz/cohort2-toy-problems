@@ -8,7 +8,7 @@
  * Returns: 'aeiou'
  *
  * Extra credit: Extend your function to handle more than two input strings.
- */
+ */ 
 
 //Works for any number of input strings:
 var commonCharacters = function(string1, string2) {
@@ -20,9 +20,24 @@ var commonCharacters = function(string1, string2) {
   		if(result.join("").indexOf(str1[i])==-1){
   			result.push(str1[i]);
   		}
-  		
   	}
   }
   return result.join("");
 };
 
+var commonCharacters1 = function(string1, string2) {
+var args=Array.from(arguments);
+var first=args[0];
+var init=first.split("");
+var result=[];
+for(var i=0;i<init.length;i++){
+	for(var x=1;x<args.length;x++){
+		if(args[x].indexOf(init[i])>-1){
+			if(result.join("").indexOf(init[i])==-1){
+				result.push(init[i]);
+			}
+		}
+	}
+}
+return result.join("");
+}

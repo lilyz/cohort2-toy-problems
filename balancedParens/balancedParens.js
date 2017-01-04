@@ -24,6 +24,8 @@
  *	"())"
  */
 
+
+//  First function to q1 +q2 only;
  var balancedParens = function (input) {
  	var sqBrack = 0, curBrack = 0, parenth = 0;
  	var arrOfChar = input.split("");
@@ -58,3 +60,5 @@
  	var result = (curBrack===0 && sqBrack ===0 && parenth===0) ? true : false;
  	return result;	
  };
+
+

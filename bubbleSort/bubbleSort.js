@@ -31,7 +31,7 @@
 // Feel free to add helper functions if needed
 
 var bubbleSort = function(array) {
-  
+ // I have a sick leave this morning, so I didn't do that toy problem.
 };
 
 /*

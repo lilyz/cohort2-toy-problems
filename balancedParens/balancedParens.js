@@ -25,6 +25,7 @@
  */
  
 
+<<<<<<< HEAD
 function checkBrackets(str){
     var depth = 0;
     for(var i=0;i<str.length;i++){   
@@ -38,3 +39,44 @@ function checkBrackets(str){
     if(depth > 0) return false;
     return true;
 }
+=======
+
+//  First function to q1 +q2 only;
+ var balancedParens = function (input) {
+  var c=input.length/2;
+  for (var i = 0; i < c; i++) {
+    input=input.replace("()",'');
+    input=input.replace("[]",'');
+    input=input.replace("{}",'');
+
+  }
+  console.log(input)
+  return input =='' ;
+
+ };
+ //second function for all cases
+ function balancedParens(input) {
+  var parentheses = "[]{}()",
+  array = [];
+  var character; 
+  var bracePosition;
+
+  for(var i = 0; character = input[i]; i++) {
+    bracePosition = parentheses.indexOf(character);
+
+    if(bracePosition === -1) {
+      continue;
+    }
+
+    if(bracePosition % 2 === 0) {
+      array.push(bracePosition + 1); 
+    } else {
+      if(array.length === 0 || array.pop() !== bracePosition) {
+        return false;
+      }
+    }
+  }
+
+  return array.length === 0;
+}
+>>>>>>> 6568bbd23274e6102779dd33ae75e4ed66b62768

@@ -24,9 +24,13 @@
  *	"())"
  */
 
+
+//  First function to q1 +q2 only;
  var balancedParens = function (input) {
+
 	var x;
 	var str=""
+	var bool;
 	for (var i = 0; i <input.length; i++) {
 		x=input[i]
 		if (x==="["||x==="]"||x==="{"||x==="}"||x==="("||x===")"||x==="'"||x==='"'){
@@ -34,12 +38,12 @@
 		}
 	}
 	var j=str.length;
+	
 	for (var i = 0; i < str.length/2; i++){
 		x=str[i].charCodeAt() + str[j-1].charCodeAt()
 		if(x!==81&&x!==248&&x!==68&&x!==78&&x!==184)
-			return false;
+			bool= false;
 	j--;
 	}
-	return true;
+	bool= true;
 };
-	

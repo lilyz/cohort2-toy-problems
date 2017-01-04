@@ -21,7 +21,7 @@
  * through the array? Again: Has the time complexity of your algorithm changed?
 */
 
-  var a = [34, 203, 3, 746, 200, 984, 198, 764, 9];
+  //var a = [34, 203, 3, 746, 200, 984, 198, 764, 9];
 /*
  * Example usage:
  * bubbleSort([2, 1, 3]); // yields [1, 2, 3]
@@ -29,9 +29,34 @@
 */
 
 // Feel free to add helper functions if needed
+function each(coll, func) {
+     if (Array.isArray(coll)) {
+         for (var i = 0; i < coll.length; i++) {
+                func(coll[i], i);
+         }
+     } else {
+         for (var key in coll) {
+                func(coll[key], key);
+         }
+     }
+}
 
 var bubbleSort = function(array) {
-  
+	debugger
+	var element = array[0];
+	var max = 0; 
+	array.slice(1);
+	each(array, function (elem, i) {
+		if (array[i] < element) {
+			max = element;
+			array[i] = elem;
+		}
+		if(array[i] > max){
+			 max = array[i];
+			array[array.length-1]=max;
+		}
+	})
+	return array;
 };
 
 /*

@@ -24,7 +24,10 @@
  *	"())"
  */
 
+
+//  First function to q1 +q2 only;
  var balancedParens = function (input) {
+
 	var x=input.split("")
 	var y=[]
 	var count=0
@@ -76,4 +79,41 @@ return false
   }
   
   return arr.length === 0;
+=======
+  var c=input.length/2;
+  for (var i = 0; i < c; i++) {
+    input=input.replace("()",'');
+    input=input.replace("[]",'');
+    input=input.replace("{}",'');
+
+  }
+  console.log(input)
+  return input =='' ;
+
+ };
+ //second function for all cases
+ function balancedParens(input) {
+  var parentheses = "[]{}()",
+  array = [];
+  var character; 
+  var bracePosition;
+
+  for(var i = 0; character = input[i]; i++) {
+    bracePosition = parentheses.indexOf(character);
+
+    if(bracePosition === -1) {
+      continue;
+    }
+
+    if(bracePosition % 2 === 0) {
+      array.push(bracePosition + 1); 
+    } else {
+      if(array.length === 0 || array.pop() !== bracePosition) {
+        return false;
+      }
+    }
+  }
+
+  return array.length === 0;
+
 }

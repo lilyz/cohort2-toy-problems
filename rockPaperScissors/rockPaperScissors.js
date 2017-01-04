@@ -68,3 +68,23 @@ function rockPaperScissors(n){
 
 
 
+=======
+function rockPaperScissors(number){
+  var array =[];
+  var array2 =["rock","paper","scissors"]
+  var bigArray=[];
+  array.length=3;
+  bigArray.length=number;
+  	if (number > 0) {
+  		for (var i = 0; i < array.length; i++) {
+	    	var x=Math.floor(Math.random() * array2.length)
+    		array.push(array2[x])
+  		}
+  			if (bigArray.indexOf(array) === -1) {
+  				bigArray.push(array)
+  			}
+  	}	
+  return bigArray + rockPaperScissors(number-1);
+}
+
+

@@ -19,19 +19,36 @@
  *
  * More credits: Do you need to consider every element every time you iterate
  * through the array? Again: Has the time complexity of your algorithm changed?
-*/
+ */
 
-  var a = [34, 203, 3, 746, 200, 984, 198, 764, 9];
+ var a = [34, 203, 3, 746, 200, 984, 198, 764, 9];
 /*
  * Example usage:
  * bubbleSort([2, 1, 3]); // yields [1, 2, 3]
  *
-*/
+ */
 
 // Feel free to add helper functions if needed
 
 var bubbleSort = function(array) {
-  
+	
+	var max = false
+	var temp =0
+	for (var i = 0; i < array.length; i++) {
+
+		if(array[i] > array[i+1]){
+			temp = array[i]
+			array[i] = array[i+1]
+			array[i+1] = temp
+			max = true
+		}
+	}
+	if(max === true){
+
+		bubbleSort(array)
+	}
+		return array
+	  
 };
 
 /*

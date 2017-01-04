@@ -23,6 +23,7 @@
 
   var a = [34, 203, 3, 746, 200, 984, 198, 764, 9];
 /*
+
  * Example usage:
  * bubbleSort([2, 1, 3]); // yields [1, 2, 3]
  *
@@ -30,11 +31,26 @@
 
 // Feel free to add helper functions if needed
 
-var bubbleSort = function(array) {
-  
-};
+function swap(array, firstIndex, secondIndex){
+    var temp = array[firstIndex];
+    array[firstIndex] = array[secondIndex];
+    array[secondIndex] = temp;
+}
+
+
+function bubbleSort(array){
+    for (var i=0; i < array.length; i++){
+        for (var j=0; j <array.length-1; j++){
+            if (array[j] > array[j+1]){
+                swap(array, j, j+1);
+            }
+        }
+    }
+    return array;
+}
 
 /*
+
 
 // Remember to look here http://visualgo.net/sorting
 */

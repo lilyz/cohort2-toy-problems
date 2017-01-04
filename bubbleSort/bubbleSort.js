@@ -31,10 +31,55 @@
 // Feel free to add helper functions if needed
 
 var bubbleSort = function(array) {
-  
+	var temp;
+	var flag;
+	do{
+		flag=false;
+	for (var i = 0; i < array.length; i++) {
+		if(array[i]>array[i+1]){
+			temp=array[i];
+			array[i]=array[i+1];
+			array[i+1]=temp;
+			flag=true;
+		}
+
+	}
+}
+	while(flag);
+	
+	return array;	
+ 
 };
+//time complexity of your algorithm:O(n2)
+
+//Optimization time/error solution
+var bubbleSort = function(array) {
+	var temp;
+	var flag;
+	var n=array.length;
+	do{
+		flag=false;
+	for (var i = 0; i < n; i++) {
+		if(array[i]>array[i+1]){
+			temp=array[i];
+			array[i]=array[i+1];
+			array[i+1]=temp;
+			flag=true;
+
+		}
+		n=n-1;
+
+	}
+}
+	while(flag);
+	
+	return array;	
+ 
+};
+
 
 /*
 
 // Remember to look here http://visualgo.net/sorting
 */
+

@@ -12,6 +12,7 @@
 
 //Works for any number of input strings:
 var commonCharacters = function(string1, string2) {
+<<<<<<< HEAD
   var x=string1.split("")
   var y=string2.split("")
   var z=[]
@@ -37,3 +38,23 @@ var commonCharacters = function(arguments) {
   return z.join('')
   }
 };
+
+
+////// here
+var commonCharacters = function(string1, string2) {
+  var x=string1.split("")
+  var y=string2.split("")
+  var z=[]
+  each(x,function(ele,i){
+    if(y.includes(ele)){
+      z.push(ele)
+    }
+  })
+  return _.uniq(z).join("")
+  
+};
+=======
+  
+};
+
+>>>>>>> 00c43a230299a537e8e7577424ea7e35cfe1b7a2

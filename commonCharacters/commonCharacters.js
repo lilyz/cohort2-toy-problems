@@ -12,6 +12,7 @@
 
 //Works for any number of input strings:
 var commonCharacters = function(string1, string2) {
+<<<<<<< HEAD
 	var args = Array.prototype.slice.call(arguments);
 	var str = [];
 	for (var i = 0; i < string1.length; i++) {
@@ -36,3 +37,8 @@ var commonCharacters = function(string1, string2) {
 
 	
 
+=======
+  
+};
+
+>>>>>>> 00c43a230299a537e8e7577424ea7e35cfe1b7a2

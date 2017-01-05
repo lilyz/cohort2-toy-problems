@@ -31,7 +31,7 @@
 // Feel free to add helper functions if needed
 
 var bubbleSort = function(array) {
-<<<<<<< HEAD
+
 	var x;	
 	for(var i= 0; i< array.length-1; i++){
 		for(var j= 0; j< array.length-1; j++){
@@ -43,10 +43,8 @@ var bubbleSort = function(array) {
 		}
 	}
 	return array;
-=======
-  
->>>>>>> f540a57301002198ee57b125f4e2730939a51639
-};
+
+};  
 
 /*
 

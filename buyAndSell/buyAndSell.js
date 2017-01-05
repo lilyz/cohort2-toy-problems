@@ -27,5 +27,30 @@ function getMinOfArray(numArray) {
 }
 
 var maximumProfit  = function(array) {
-	//your code is here
+var minprice=getMinOfArray(array)
+var maxprofit=getMaxOfArray(array);
+
+if(array.indexOf(maxprofit)>array.indexOf(minprice)){
+	return maxprofit-minprice;
 }
+
+for(var i=0;i<array.length;i++){
+	if(array[i]>minprice && array.indexOf(array[i])>array.indexOf(maxprofit)){
+
+		maxprofit=array[i]
+	}
+	else{
+		maxprofit=0;
+	}
+}
+if(maxprofit!==0){
+	return maxprofit-minprice;
+
+}
+else{
+	return 0;
+
+}
+}
+
+	

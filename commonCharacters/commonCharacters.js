@@ -22,3 +22,30 @@ var commonCharacters = function(string1, string2) {
   return arr;
 };
 
+var commonCharacters1 = function(string1, string2) {
+  var str="";
+  var ar=[];
+  var args=Array.from(arguments);
+for(i=0;i<args.length;i++){
+	args[i]=unique(args[i])
+}
+  for (i=0;i<args.length;i++){
+  	str+=args[i];
+  }
+  for (x=0;x<str.length;x++){
+  	if(str.split(str[x]).length-1>=args.length){
+  		if(ar.indexOf(str[x])===-1)
+  		ar.push(str[x]);
+  	}
+  }
+  return ar.join("");
+};
+function unique(str) {
+  var result = '';
+  for(var i = 0; i < str.length; i++) {
+    if(result.indexOf(str[i]) < 0) {
+      result += str[i];
+    }
+  }
+  return result;
+}

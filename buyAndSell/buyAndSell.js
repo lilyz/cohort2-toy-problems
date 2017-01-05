@@ -20,12 +20,28 @@
 
 // Feel free to add helper functions if needed
 function getMaxOfArray(numArray) {
-  return Math.max.apply(null, numArray);
+
+ return Math.max.apply(null, numArray);
 }
 function getMinOfArray(numArray) {
   return Math.min.apply(null, numArray);
 }
 
 var maximumProfit  = function(array) {
-	//your code is here
-}
+  var profit=0;
+  var ar =[]
+  var max=getMaxOfArray(array);
+  var min=getMinOfArray(array);
+  for (var i = 0 ; i< array.length ; i++){
+    if(array[i]>array[i++]){
+      ar.push(array[i])
+    }
+    else {
+      ar.splice(array[i])
+    }
+   
+  }
+  return profit=max-min
+   
+   
+  }

@@ -27,5 +27,11 @@ function getMinOfArray(numArray) {
 }
 
 var maximumProfit  = function(array) {
-	//your code is here
+	// so we will buy first at lowest price
+	// then sell at max to gain the desired profit.
+	var temp = [];
+   for (var i = 0; i < array.length ; i++){
+   temp.push(getMinOfArray);
+   }
+
 }

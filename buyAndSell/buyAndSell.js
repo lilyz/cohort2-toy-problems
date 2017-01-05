@@ -28,4 +28,9 @@ function getMinOfArray(numArray) {
 
 var maximumProfit  = function(array) {
 	//your code is here
+	var min = getMinOfArray(array);
+	var minIndex = array.indexOf(min);
+	var afterBuy = array.slice(minIndex, array.length);
+	var max = getMaxOfArray(afterBuy);
+	return max - min;
 }

@@ -12,6 +12,7 @@
 
 //Works for any number of input strings:
 var commonCharacters = function(string1, string2) {
+<<<<<<< HEAD
 	var str = ""
 	
   for (var i = 0; i < string1.length; i++) {
@@ -23,5 +24,8 @@ var commonCharacters = function(string1, string2) {
   	}
   }
   return str;
+=======
+  
+>>>>>>> 00c43a230299a537e8e7577424ea7e35cfe1b7a2
 };
 

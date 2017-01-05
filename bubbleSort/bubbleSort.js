@@ -44,20 +44,6 @@ var bubbleSort = function(array) {
 	return (array)
   
 };
-	var array = [2, 5, 9];
-function bubl (array){
-	var arr=[];
-	var min1=Math.min(...array)
-	arr.push(min1)
-	var index = array.indexOf(min1);
-	if (index > -1) {
-    array.splice(index, 1);
-	}
-	if(array.length!==0){
-	bubl(array)
-	}
-	return array
-}
 
 /*
 

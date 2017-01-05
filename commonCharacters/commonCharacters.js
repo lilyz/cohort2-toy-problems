@@ -25,10 +25,10 @@ var commonCharacters = function(str1, str2) {
 }
 
 
-
 var commonCharacters = function() {
-	var array,firstArg=arguments[0]; 
-	for (var i=0; i<arguments.length ; i++){
+	var array,firstArg; 
+	for (var i=1; i<arguments.length ; i++){
+		firstArg=arguments[0];
 		if (arguments[i].length > firstArg.length ){
 			firstArg=arguments[i];			
 		}
@@ -40,3 +40,5 @@ var commonCharacters = function() {
 	}
 	return array.join(""); 
 }
+
+//self filter include

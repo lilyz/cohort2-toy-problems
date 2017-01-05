@@ -20,7 +20,9 @@
 
 // Feel free to add helper functions if needed
 function getMaxOfArray(numArray) {
+	if(numArray.length >0)
   return Math.max.apply(null, numArray);
+return 0;
 }
 function getMinOfArray(numArray) {
   return Math.min.apply(null, numArray);
@@ -28,4 +30,25 @@ function getMinOfArray(numArray) {
 
 var maximumProfit  = function(array) {
 	//your code is here
+	
+	for(var i=0;i<array.length;i++)
+	{	
+		var x=	array.slice(i+1);
+		temp = getMaxOfArray(x) -array[i];
+		for(var j=0;j<x.length;j++)
+		 if( x < getMaxOfArray(x)-array[j]  )
+			temp = getMaxOfArray(x)-array[j];		
+	}
+	return temp;
 }
+	// _.each(array, function(value,index){
+	// 	//var temp= getMaxOfArray(allitem);
+	// 	temp= getMaxOfArray(array.slice(index+1)) - value;
+	// 	if(temp > maximumProfit(array.slice(index+1)))
+	// 		return temp;		// _.each(allitem, function(valuee, indexx){
+	// 		return false
+	// 	// 	if(temp1> )
+
+	// 	// })
+	// })
+	// return temp;

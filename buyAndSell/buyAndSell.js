@@ -27,5 +27,22 @@ function getMinOfArray(numArray) {
 }
 
 var maximumProfit  = function(array) {
-	//your code is here
+	// going to save the lower price in variable 
+	var lowerPrice = array[0]
+	// also for the best day to sell the ticket
+	var bestDayTosell = array[0]
+	// for loop to go ober every elements in the array 
+	for (var i = 0; i < array.length; i++) {
+		// checking for the lowest price to but the ticket
+		if(array[i] < lowerPrice){
+			//replaceing the element 
+			lowerPrice = array[i]
+			// also checking for the best day to sell the ticket
+		}else if(array[i]> bestDayTosell && array.indexOf(lowerPrice)>array.indexOf(bestDayTosell)){
+			// and here we also replaceing the value 
+			bestDayTosell = array[i]
+		}
+	}
+	// the last thing we do is to return the value that we are going to subtraction between the best day to sell and the lower price to buy, and that's it :D 
+	return bestDayTosell - lowerPrice  
 }

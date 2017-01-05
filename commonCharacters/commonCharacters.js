@@ -35,39 +35,25 @@ function commonCharacters(str,str1){
 		}
 	}
 	return arr.join("")
-}
+}-
 
-function commonCharacters(arguments){
+
+
+
+function cc(arguments){
 	var str=arguments[0]
-	arguments=arguments.replace(/\s/g, '');
-	var arr=[]
-	for (var i=0;i<str.length;i++){
-		for (var j=0;j<arguments.length;j++){
-			if(arguments[j]===str[i]){
-				arr.puh(str[i])
-			}
-		}
-	}
-		return arr.join("")
+	var x=Array.from(arguments).join("")
 
-	}
-// 	return str.join("")
-// 	// var arr=[];
-
-// 	// //	if(arr.indexOf(arguments[i])){
-//  //      arr
-// 	// return arr.join("")
-// }
-
-
-// function commonCharacters(arguments){
-// 	arguments=arguments.replace(/\s/g, '').split("")
-// 	var arr=0
-// 	for(var i=0;i<arguments.length;i++){
-// 		if(arguments[i]===arr[i]){
-// 			return arr
-// 		}else{
-// 			return arr.push(arguments[i])
-// 		}
-// 	}
-// }
+	return commonCharacters(str,x)
+	// var arr=[]
+	// var x=""
+	// for(var i=0;i<str.length;i++){
+	// 	for(var j=0;j<arguments.length;j++){
+	// 		if(str[i]===arguments[j]){
+ //            //arr.push(arguments[j])
+ //    x+=arguments[j]
+	// 		}
+	// 	}
+	// }
+	// return x///arr 
+}

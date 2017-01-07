@@ -9,7 +9,6 @@
  *
  * Extra credit: Extend your function to handle more than two input strings.
  */
-
 //Works for any number of input strings:
 var commonCharacters = function(string1, string2) {
   var args = Array.from(arguments).slice(1);

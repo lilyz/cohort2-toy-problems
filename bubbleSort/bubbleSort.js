@@ -31,6 +31,7 @@
 // Feel free to add helper functions if needed
 
 var bubbleSort = function(array) {
+<<<<<<< HEAD
 for(var i=0;i<array.length;i++){
 	for(var j=0;j<i;j++){
        if(array[i]>array[i+1]){
@@ -45,6 +46,11 @@ return array
   
 
   
+=======
+  
+};
+
+>>>>>>> f540a57301002198ee57b125f4e2730939a51639
 /*
 
 // Remember to look here http://visualgo.net/sorting

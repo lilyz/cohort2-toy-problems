@@ -12,7 +12,10 @@
  *
  * QUERY: What's the time complexity of your algorithm? If you don't already
  * know, try to intuit this without consulting the Googles.
+<<<<<<< HEAD
  O(n)
+=======
+>>>>>>> f540a57301002198ee57b125f4e2730939a51639
  *
  * Extra credit: Optimization time! During any given pass, if no elements are
  * swapped we can assume the list is sorted and can exit the function early.
@@ -32,6 +35,7 @@
 // Feel free to add helper functions if needed
 
 var bubbleSort = function(array) {
+<<<<<<< HEAD
 
 	var r=[]
   for(var i=0;i<array.length;i++){
@@ -47,6 +51,9 @@ var bubbleSort = function(array) {
 
   }
   return r
+=======
+  
+>>>>>>> f540a57301002198ee57b125f4e2730939a51639
 };
 
 /*

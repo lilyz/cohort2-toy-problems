@@ -12,3 +12,18 @@ Given that total amount of pences, calculate the number of ways to create that a
 Example:
 coinCombination(200p) //-> 73682
 */
+ function coinCombination(pences) {
+ 	var coins=[1,2,5,10,20,50,100,200]
+ 	pences = pences.split('')
+ 	var amount =pences.slice(0,a.length-1);
+ 	var count =0;
+ 	// get a random coin 
+ 	randIndex =coins[Math.floor(Math.random()*coins.length)] 
+ 	//how many way the sum of random coins give the result  
+ 	// do{
+ 	// 	count++
+ 	// }
+ 	// 	while(randIndex + randIndex + randIndex +randIndex === amount );
+ 	// return count
+
+ 	//  }

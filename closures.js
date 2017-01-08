@@ -51,7 +51,6 @@ myGame.myLevel(); //should return "You need to improve your game"
 function pingPongTracker(){
 	var obj={}
 	var time=0
-	 var spentTime= setTimeout(function(){time ++; }, 1000);
 	 obj.timeSpentPlaying=function(){
 	 	
 	 	return time+ " minutes"
@@ -61,7 +60,6 @@ function pingPongTracker(){
 	 	return "Game played"
 	 },
 	 obj.myLevel=function(){
-	 		clearInterval(spentTime)
 	 		if(time<30){
 	 			return "I need to improve my game"
 	 		} else if(time>=30 && time<=100){

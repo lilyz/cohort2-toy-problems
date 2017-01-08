@@ -50,7 +50,13 @@ var pingPongTracker = function(){
 			return timePlayed;
 		},
 		myLevel:function(){
-			return "You need to improve your game"
+			if(timePlayed<30){
+				return "I need to improve my game"
+			}else if (timePlayed>=30 && timePlayed < 100){
+				return "You need to improve your game"
+			}else if(timePlayed>100){
+				return "WOW, YOU ARE PRO LIKE MOHANNAD"
+			}
 		}
 	}
 }

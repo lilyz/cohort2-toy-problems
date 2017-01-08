@@ -14,6 +14,11 @@ square(3);//should return 9
 cube(3);//should return 27
 */
 
+function pow (ex) {
+	return function (n) {
+		return Math.pow(n, ex)
+	}
+}
 
 /*
 Problem 2:
@@ -34,3 +39,27 @@ myGame.playOneGame();//should return "Game played";
 myGame.timeSpentPlaying(); //should return 30;
 myGame.myLevel(); //should return "You need to improve your game"
 */
+
+
+function pingPongTracker () {
+	var timer1 = 0;
+	return {
+		timeSpentPlaying: function () {
+				
+			return timer1;
+		},
+		playOneGame: function () {
+			timer1+=15;
+			return "Game played";
+		},
+		myLevel: function () {
+			if (timer1 < 30) {
+				return "I need to improve my game";
+			}
+			if (timer1 > 30 && timer1 < 100) {
+				return "You need to improve your game";
+			}
+			return "Wow, I have wasted a lot of time";
+		}
+	}
+}

@@ -15,17 +15,10 @@ cube(3);//should return 27
 */
 
 function pow(number){
-	var obj={}
-
-		obj.square=function(num){
-			return Math.pow(num,number)
-
-		},
-		obj.cube=function(num){
-			return Math.pow(num,number)
-		}
-		return obj
-
+	var number=number
+	return function(num){
+		return Math.pow(num,number)
+	}
 }
 
 /*

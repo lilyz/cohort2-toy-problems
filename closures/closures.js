@@ -13,3 +13,16 @@ var cube = pow(3);
 square(3);//should return 9
 cube(3);//should return 27
 */
+
+function power(exponent){
+
+return{
+squareCalc : function(x){
+	return Math.pow(x, exponent);
+}
+cubeCalc :  function(y){
+	return Math.pow(y.exponent);
+}
+	return power;
+}
+}

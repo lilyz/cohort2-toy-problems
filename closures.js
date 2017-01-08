@@ -14,6 +14,13 @@ square(3);//should return 9
 cube(3);//should return 27
 */
 
+
+var pow = function(y){
+	return function(x){
+		return Math.pow(y, x);
+	};
+};
+
 /*
 Problem 2:
 Write a function pingPongTracker that accepts no arguments and returns an object with the
@@ -33,3 +40,31 @@ myGame.playOneGame();//should return "Game played";
 myGame.timeSpentPlaying(); //should return 30;
 myGame.myLevel(); //should return "You need to improve your game"
 */
+
+
+
+var pingPongTracker = function(){
+	var pingMethods = {};
+	//var timer = new Date().getMinutes();
+	var totalAmo=0;
+	pingMethods.playOneGame = function(){
+		 //totalAmo = (new Date().getMinutes() - timer) + 15; 
+		 totalAmo +=15; 
+		return "Game played";
+	};
+
+	pingMethods.timeSpentPlaying = function(){
+		return  totalAmo;
+	};
+
+	pingMethods.myLevel = function(){
+		if(totalAmo < 30)
+			return "I need to improve my game";
+		else if( 30 < totalAmo < 100)
+			return "You need to improve your game";
+		else if(totalAmo > 100)
+			return "Wow, I have wasted a lot of time";
+	};
+return pingMethods;
+
+};

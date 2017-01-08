@@ -13,3 +13,7 @@ var cube = pow(3);
 square(3);//should return 9
 cube(3);//should return 27
 */
+
+function poer2(x){
+	return power
+}

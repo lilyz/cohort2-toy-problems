@@ -34,3 +34,39 @@ myGame.playOneGame();//should return "Game played";
 myGame.timeSpentPlaying(); //should return 30;
 myGame.myLevel(); //should return "You need to improve your game"
 */
+
+function power(x){
+	return function(a){
+		var b = 1;
+		for (var i = 0; i < x; i++) {
+			b = b * a;
+		}
+		return b
+	}
+}
+
+
+var pingPongTracker = function (){
+		var obj = {};
+		var timePlaying = 0;
+	obj.timeSpentPlaying = function(){
+			return timePlaying;
+	}
+
+	obj.playOneGame = function(){
+		timePlaying+=15;
+		return "Game played"
+	}
+
+	obj.myLevel = function(){
+			if(timePlaying < 30){
+				return "You need to improve your game";;
+			}else if(timePlaying > 30 && timePlaying < 100){
+				return "You need to improve your game"
+			}else{
+				return "Wow, I have wasted a lot of time"
+			}
+	}
+
+	return obj;
+}

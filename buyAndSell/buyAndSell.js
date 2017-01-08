@@ -27,10 +27,14 @@ function getMinOfArray(numArray) {
 }
 
 var maximumProfit  = function(array) {
+<<<<<<< HEAD
 	var max=0, newArr=[], min = getMinOfArray(array); 
 	for (var i=array.indexOf(min); i<array.length; i++){
 		newArr.push(array[i]);
 		max = getMaxOfArray(newArr);
 	}
 	return max-min;  
+=======
+	//your code is here
+>>>>>>> 38d3baa03ca1511013858e091ad88f337836942c
 }

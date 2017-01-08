@@ -14,6 +14,20 @@ square(3);//should return 9
 cube(3);//should return 27
 */
 
+function pow(number){
+	var obj={}
+
+		obj.square=function(num){
+			return Math.pow(num,number)
+
+		},
+		obj.cube=function(num){
+			return Math.pow(num,number)
+		}
+		return obj
+
+}
+
 /*
 Problem 2:
 Write a function pingPongTracker that accepts no arguments and returns an object with the
@@ -33,3 +47,28 @@ myGame.playOneGame();//should return "Game played";
 myGame.timeSpentPlaying(); //should return 30;
 myGame.myLevel(); //should return "You need to improve your game"
 */
+
+function pingPongTracker(){
+	var obj={}
+	var time=0
+	 var spentTime= setTimeout(function(){time ++; }, 1000);
+	 obj.timeSpentPlaying=function(){
+	 	
+	 	return time+ " minutes"
+	 },
+	 obj.playOneGame=function(){
+	 	time+=15
+	 	return "Game played"
+	 },
+	 obj.myLevel=function(){
+	 		clearInterval(spentTime)
+	 		if(time<30){
+	 			return "I need to improve my game"
+	 		} else if(time>=30 && time<=100){
+	 			return "You need to improve your game"
+	 		}
+
+	 		return  "Wow, I have wasted a lot of time"
+	 }
+
+}

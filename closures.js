@@ -33,3 +33,44 @@ myGame.playOneGame();//should return "Game played";
 myGame.timeSpentPlaying(); //should return 30;
 myGame.myLevel(); //should return "You need to improve your game"
 */
+
+
+function test(exp){
+	return function(base){
+		return Math.pow(base,exp)
+	}
+}
+
+
+
+
+
+function pingPongTracker(){
+  
+  var methodes={};
+  methodes.timePlayed=0;
+      methodes.timeSpentPlaying=function(){
+       return methodes.timePlayed
+     }
+
+      methodes.playOneGame=function(){
+        methodes.timePlayed+=15
+        return "Game played";
+     }
+
+     methodes.myLevel(){
+            if(methodes.timePlayed < 30) {
+                  return "I need to improve my game"
+            }
+            if(methodes.timePlayed>30 && methodes.timePlayed < 100 ) {
+              return "You need to improve your game"
+            }
+            if(methodes.timePlayed>100){
+             return   "Wow, I have wasted a lot of time"
+            }
+       }
+
+
+  }
+
+}

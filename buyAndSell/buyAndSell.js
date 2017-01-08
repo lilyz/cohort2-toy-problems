@@ -27,7 +27,11 @@ function getMinOfArray(numArray) {
 }
 
 var maximumProfit  = function(array) {
+<<<<<<< HEAD
 	var y = getMinOfArray(array)
 	narr=array.slice(array.indexOf(y))
 			return getMaxOfArray(narr) -y
+=======
+	//your code is here
+>>>>>>> 22de3ef23269d55c15ab791aec99456e3006e5d7
 }

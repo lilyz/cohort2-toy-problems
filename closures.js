@@ -13,6 +13,15 @@ var cube = pow(3);
 square(3);//should return 9
 cube(3);//should return 27
 */
+function pow (ex){
+	this.ex=ex
+}
+  var square =function(n){
+return Math.pow(n,this.ex)
+}
+ var cube =function(n){
+return Math.pow(n,this.ex)
+}
 
 /*
 Problem 2:
@@ -33,3 +42,18 @@ myGame.playOneGame();//should return "Game played";
 myGame.timeSpentPlaying(); //should return 30;
 myGame.myLevel(); //should return "You need to improve your game"
 */
+function pingPongTracker (arg){
+	return obj{
+		var timeSpentPlaying = function() {
+		},
+		var	playOneGame=function(){
+
+
+		},
+		var myLevel=function(){
+
+		}
+
+	}
+	
+}

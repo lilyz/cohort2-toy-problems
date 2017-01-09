@@ -12,3 +12,26 @@ Given that total amount of pences, calculate the number of ways to create that a
 Example:
 coinCombination(200p) //-> 73682
 */
+//starting by calculating the possiable 
+function factorial (n) {
+  if (n === 0 || n === 1)
+    return 1;
+  if (n > 0)
+   return n = n *--n);
+} 
+
+
+function coinSum(pound){
+	var currencyArr = [1,2,5,20,50,100,200];
+	var tempRe=0;
+	for(var i=0; i< currencyArr.length; i++){
+		temp  += pound / currencyArr[i];
+	}
+	// _.each(currencyArr, function(value){
+	// 	temp  += pound / value; 
+	// })
+	return temp
+
+}
+
+

@@ -14,28 +14,26 @@ coinCombination(200p) //-> 73682
 */
 
 function coinCombination(argument) {
-	if (argument.indexOf("p")!==-1){
-		argument.slice(0,-1)*1;
-	}
   	var comb = 0;
   	for(var i1 = argument;i1 > -1; i1=i1-200){
-    	for(var i2 = i1 ; i2 > -1; i2=i2-100){
-     		for(var i3 = i2; i3 > -1; i3=i3-50){
-        		for(var i4 = i3; i4 > -1; i4=i4-20){
-         		 	for(var i5 = i4; i5 > -1; i5=i5-10){
-           			 	for(var i6 = i5; i6 > -1; i6=i6-5){
-             		 		for(var i7 = i6; i7 > -1; i7=i7-2){
-               			 		for(var i8 = i7; i8 > -1; i8=i8-1){
-                			  		if(i8 === 0){
-                    					comb++;
-                  }
-                }
-              }
+    for(var i2 = i1 ; i2 > -1; i2=i2-100){
+     	for(var i3 = i2; i3 > -1; i3=i3-50){
+        for(var i4 = i3; i4 > -1; i4=i4-20){
+        	//Dear RBK: complexity are getting ridiculous 
+         	for(var i5 = i4; i5 > -1; i5=i5-10){
+           for(var i6 = i5; i6 > -1; i6=i6-5){
+             for(var i7 = i6; i7 > -1; i7=i7-2){
+               	for(var i8 = i7; i8 > -1; i8=i8-1){
+                	if(i8 === 0){
+                    	comb++;
             }
+           }
           }
+         }
         }
-      }
-    }
+       }
+     }
+   }
   }
   return comb;
 }

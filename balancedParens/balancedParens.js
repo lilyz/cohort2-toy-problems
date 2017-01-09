@@ -27,39 +27,23 @@
 
 //  First function to q1 +q2 only;
  var balancedParens = function (input) {
-  var c=input.length/2;
-  for (var i = 0; i < c; i++) {
-    input=input.replace("()",'');
-    input=input.replace("[]",'');
-    input=input.replace("{}",'');
 
-  }
-  console.log(input)
-  return input =='' ;
-
- };
- //second function for all cases
- function balancedParens(input) {
-  var parentheses = "[]{}()",
-  array = [];
-  var character; 
-  var bracePosition;
-
-  for(var i = 0; character = input[i]; i++) {
-    bracePosition = parentheses.indexOf(character);
-
-    if(bracePosition === -1) {
-      continue;
-    }
-
-    if(bracePosition % 2 === 0) {
-      array.push(bracePosition + 1); 
-    } else {
-      if(array.length === 0 || array.pop() !== bracePosition) {
-        return false;
-      }
-    }
-  }
-
-  return array.length === 0;
-}
+	var x;
+	var str=""
+	var bool;
+	for (var i = 0; i <input.length; i++) {
+		x=input[i]
+		if (x==="["||x==="]"||x==="{"||x==="}"||x==="("||x===")"||x==="'"||x==='"'){
+			str+=x;
+		}
+	}
+	var j=str.length;
+	
+	for (var i = 0; i < str.length/2; i++){
+		x=str[i].charCodeAt() + str[j-1].charCodeAt()
+		if(x!==81&&x!==248&&x!==68&&x!==78&&x!==184)
+			bool= false;
+	j--;
+	}
+	bool= true;
+};

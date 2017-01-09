@@ -16,22 +16,23 @@
 * Example:
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
-*/
-function rockPaperScissors(number){
-  var array =[];
-  var array2 =["rock","paper","scissors"]
-  var bigArray=[];
-  array.length=3;
-  bigArray.length=number;
-  	if (number > 0) {
-  		for (var i = 0; i < array.length; i++) {
-	    	var x=Math.floor(Math.random() * array2.length)
-    		array.push(array2[x])
-  		}
-  			if (bigArray.indexOf(array) === -1) {
-  				bigArray.push(array)
-  			}
-  	}	
-  return bigArray + rockPaperScissors(number-1);
+<<<<<<< HEAD
+*/ function rockPaperScissors(n){
+	var x = [];
+	var box = [];
+	var obj = {rock:0,paper:1,scissors:2};
+	for (var i = 0; i < n; i++) {
+		x[i] = "rock"
+	}
+
+for (var i = n-2; i > 0; i--) {
+  for (var z in obj){
+	for (var key in obj){
+		box.push(x);
+		x[n-1] = key;
+	}
+  	x[i] = z;
+  }
 }
 
+}

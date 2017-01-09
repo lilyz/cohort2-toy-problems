@@ -15,6 +15,7 @@
   * console.log(anagrams); // [ 'abc', 'acb', 'bac', 'bca', 'cab', 'cba' ]
   */
 
+<<<<<<< HEAD
 var allAnagrams = function(str) {
 	var arr = str.split("");
 	var acc= [];
@@ -27,3 +28,28 @@ var allAnagrams = function(str) {
 	return idx;
 };
 
+=======
+var allAnagrams = function(string) {
+  var arr=string.split('');
+  var array=[];
+  var bigArray=[];
+  var l =arr.length;
+  for (var i = 0; ; i++) {
+    for (var j = 0; j < arr.length; j++) {
+      var x = Math.floor(Math.random() * arr.length)
+      array.push(arr[x]);
+    }
+    var x=array.join("");
+    if (bigArray.indexOf(x) === -1 ) {
+      bigArray.push(x)
+      array=[];
+    }
+    if(bigArray.length === Math.pow(l,l)){
+      return bigArray;
+    }
+    array=[];
+}
+
+
+};
+>>>>>>> cba0403161af1b52cd68471d7804b98f26a4bf23

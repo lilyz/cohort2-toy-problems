@@ -17,15 +17,20 @@ function coinCombination (currency){
 	var y1=100;
 	var y2=200;
 	var count =0;
-  for(var i =0 ; i< p.length ; i++){
-	if(p[i]=== currency ){
-		count++
-    }
-    else if (currency >Math.max.apply(null, p)) {
-    			if(currency===y1||currency===y2){
-    				count++
-    			}
-    }
-    else if()
-  }
+	for(var i =0 ; i< p.length ; i++){
+		for (var j = i+1 ; j< p.length-1 ; j++){
+			if(p[i]=== currency ){
+				count++;
+			}
+			else if (currency >Math.max.apply(null, p)) {
+				if(currency===y1||currency===y2){
+					count++;
+				}
+			}
+			else if(p[i]+p[j]===currency){
+				count++;
+			}
+		}
+	}
+	return count;
 }

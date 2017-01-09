@@ -31,26 +31,24 @@
 // Feel free to add helper functions if needed
 
 var bubbleSort = function(array) {
-<<<<<<< HEAD
+var temp=0
 for(var i=0;i<array.length;i++){
-	for(var j=0;j<i;j++){
-       if(array[i]>array[i+1]){
-       	var temp=array[i+1]
+	    if(array[i]>array[i+1]){
+       	temp=array[i+1]
        	array[i+1]=array[i]
-        array[i]=temp
+        array[i]=temp                      //O(n^2)
+       }
+	for(var j=0;j<array.length;j++){
+       if(array[j]>array[j+1]){
+       	temp=array[j+1]
+       	array[j+1]=array[j]
+        array[j]=temp
        }
    }
 }
 return array
 }
-  
 
-  
-=======
-  
-};
-
->>>>>>> f540a57301002198ee57b125f4e2730939a51639
 /*
 
 // Remember to look here http://visualgo.net/sorting

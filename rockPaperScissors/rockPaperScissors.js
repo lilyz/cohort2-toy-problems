@@ -16,23 +16,29 @@
 * Example:
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
-<<<<<<< HEAD
-*/ function rockPaperScissors(n){
-	var x = [];
-	var box = [];
-	var obj = {rock:0,paper:1,scissors:2};
-	for (var i = 0; i < n; i++) {
-		x[i] = "rock"
-	}
+*/
 
-for (var i = n-2; i > 0; i--) {
-  for (var z in obj){
-	for (var key in obj){
-		box.push(x);
-		x[n-1] = key;
-	}
-  	x[i] = z;
-  }
-}
+var rockPaperScissors = function (/* START SOLUTION */rounds/* END SOLUTION */) {
+  // TODO: your solution here
+  /* START SOLUTION */
+    rounds = rounds || 3;
+    var outcomes = [];
 
-}
+    var plays = ['rock', 'paper', 'scissors'];
+
+    var combos = function(roundsToGo, playedSoFar) {
+      if( roundsToGo === 0 ){
+        outcomes.push( playedSoFar );
+        return;
+      }
+
+      for( var i = 0; i < plays.length; i++ ){
+        var currentPlay = plays[i];
+        combos( roundsToGo-1, playedSoFar.concat(currentPlay) );
+      }
+    };
+    combos( rounds, [] );
+
+    return outcomes;
+  /* END SOLUTION */
+};

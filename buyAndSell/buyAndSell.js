@@ -19,26 +19,7 @@
 */
 
 // Feel free to add helper functions if needed
-function getMaxOfArray(numArray) {
-  return Math.max.apply(null, numArray);
-}
-function getMinOfArray(numArray) {
-  return Math.min.apply(null, numArray);
-}
 
 var maximumProfit  = function(array) {
-	var maxProfit = array[1]-array[0];
-	var c=false;
-	for (var k = 0; k < array.length; k++) {
-		for (var i = k; i < array.length-1; i++){
-			if((array[i+1]-array[k]) > maxProfit && (array[i+1]-array[k])>0){
-				maxProfit = array[i+1]-array[k]
-				c = true;
-			}
-		}			
-	}
 
-	if(c === true){
-		return maxProfit;
-	}else return 0;
-}
+};

@@ -12,3 +12,17 @@ Given that total amount of pences, calculate the number of ways to create that a
 Example:
 coinCombination(200p) //-> 73682
 */
+
+var coinUnits = [1, 2, 5, 10, 20, 50, 100, 200];
+
+var coinCombination = function(totalAmount){
+
+	var f = function(leftOver, index){
+		return (leftOver === 0) ? 1 :
+			   (leftOver < 0 || index === coinUnits.length) ? 0 :
+			   f((leftOver-coinUnits[index]), index) + f(leftOver, index+1);
+	};
+
+
+	return f(totalAmount, 0)
+}

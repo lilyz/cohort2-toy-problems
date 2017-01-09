@@ -21,29 +21,37 @@
  * balancedParens(' var wow  = { yo: thisIsAwesome() }'); // true
  * balancedParens(' var hubble = function() { telescopes.awesome();'); // false
  *
- *	"())"
+ *
  */
 
-
-//  First function to q1 +q2 only;
  var balancedParens = function (input) {
+   /* START SOLUTION */
+   // stack is an array that will help us keep track of all of our pairs
+   var stack = [];
+   var pairs = {
+     '{':'}',
+     '[':']',
+     '(':')'
+   };
 
-	var x;
-	var str=""
-	var bool;
-	for (var i = 0; i <input.length; i++) {
-		x=input[i]
-		if (x==="["||x==="]"||x==="{"||x==="}"||x==="("||x===")"||x==="'"||x==='"'){
-			str+=x;
-		}
-	}
-	var j=str.length;
-	
-	for (var i = 0; i < str.length/2; i++){
-		x=str[i].charCodeAt() + str[j-1].charCodeAt()
-		if(x!==81&&x!==248&&x!==68&&x!==78&&x!==184)
-			bool= false;
-	j--;
-	}
-	bool= true;
-};
+   // we want to loop through each character in the string input
+   for (var i = 0; i < input.length; i++){
+     // let's set the character we are currently on to a variable to make things cleaner
+     var chr = input[i];
+
+     // if we find a character that belongs in a pair, we want to push it to our 'stack' array
+     if (pairs[chr]){
+       stack.push(chr);
+    // else, we chaeck to see if our character is a closing bracket
+     } else if (chr === '}' || chr === ']' || chr === ')'){
+       // if it is, we want to check if it's matching!
+       if (pairs[stack.pop()] !== chr){
+         return false;
+       }
+     }
+   }
+
+   //return false if there are any unclosed brackets
+   return stack.length === 0;
+   /* END SOLUTION */
+ };

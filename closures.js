@@ -13,6 +13,7 @@ var cube = pow(3);
 square(3);//should return 9
 cube(3);//should return 27
 */
+<<<<<<< HEAD
 var exponent=function(exp){
 	var run ={};
 	run.calculate=function(num){
@@ -22,6 +23,9 @@ var exponent=function(exp){
 	return run;
 }
 /// ********to invoke this function write exponent(exponent).calculate(num)********//////
+=======
+
+>>>>>>> 3e9b530700a7fa2054c32376bb39e1fbaa388851
 /*
 Problem 2:
 Write a function pingPongTracker that accepts no arguments and returns an object with the

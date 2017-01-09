@@ -14,6 +14,7 @@ square(3);//should return 9
 cube(3);//should return 27
 */
 
+<<<<<<< HEAD
 /*var set =function(n){
 var someinstance = {};
 someinstance.n = n;
@@ -35,17 +36,19 @@ return someinstance;
 var set =function(n){
 //var someinstance = {};
 //someinstance.n = n;
-fn:function(x){
-	 Math.pow(n,x)
-}
-return fn
+return function(x){
+	 Math.pow(x,n)
 }
 
+}
 
 
 
 
 
+
+=======
+>>>>>>> 3e9b530700a7fa2054c32376bb39e1fbaa388851
 /*
 Problem 2:
 Write a function pingPongTracker that accepts no arguments and returns an object with the
@@ -72,7 +75,7 @@ var pingPongTracker=function(){
 	someinstance.count=0;
 	someinstance.x;
 	someinstance.timeSpentPlaying=function(){
-		x= setInterval(function(){ cont++ }, 1000)
+		x= setInterval(function(){ count++ }, 1000)
 		return count
 
 	},

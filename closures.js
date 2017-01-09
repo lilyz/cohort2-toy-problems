@@ -14,7 +14,6 @@ square(3);//should return 9
 cube(3);//should return 27
 */
 
-
 /*
 Problem 2:
 Write a function pingPongTracker that accepts no arguments and returns an object with the

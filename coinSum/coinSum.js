@@ -32,4 +32,5 @@ function coinCombination(str){
 // i've changed the pounds into pences as well ;
 // declared a variabla that would hold the sum of any added possibility , and another one to count how many
 // possible way exists ;
-// basically i wanna loop over the array of coins and then check all the possibilities  
+// basically i wanna loop over the array of coins and then check all the possibilities
+ // i'm pretty sure we need recursion btw  

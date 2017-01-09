@@ -30,6 +30,7 @@
 
 // Feel free to add helper functions if needed
 
+<<<<<<< HEAD
 function bubbleSort(array) {
   
   for (var i = 0; i < array.length; i++) { 
@@ -44,6 +45,12 @@ function bubbleSort(array) {
   }
 return array;
 }
+=======
+var bubbleSort = function(array) {
+  
+};
+
+>>>>>>> f540a57301002198ee57b125f4e2730939a51639
 /*
 
 // Remember to look here http://visualgo.net/sorting

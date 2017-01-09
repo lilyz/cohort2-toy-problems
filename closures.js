@@ -14,12 +14,15 @@ square(3);//should return 9
 cube(3);//should return 27
 */
 
+<<<<<<< HEAD
 function pow (ex) {
 	return function (n) {
 		return Math.pow(n, ex)
 	}
 }
 
+=======
+>>>>>>> 3e9b530700a7fa2054c32376bb39e1fbaa388851
 /*
 Problem 2:
 Write a function pingPongTracker that accepts no arguments and returns an object with the

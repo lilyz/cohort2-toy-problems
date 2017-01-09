@@ -27,6 +27,7 @@ function getMinOfArray(numArray) {
 }
 
 var maximumProfit  = function(array) {
+<<<<<<< HEAD
 	var maxprfit
 	var x
 	var y
@@ -46,4 +47,7 @@ var maximumProfit  = function(array) {
 		
 	
 
+=======
+	//your code is here
+>>>>>>> 38d3baa03ca1511013858e091ad88f337836942c
 }

@@ -12,3 +12,18 @@ Given that total amount of pences, calculate the number of ways to create that a
 Example:
 coinCombination(200p) //-> 73682
 */
+
+function coinCombination(pence){
+  var arr=[];
+  var count=0;
+  var ArrOfpence=[1,2,5,10,20,50,100,200];
+  var indx=ArrOfpence.indexOf(pence);
+   ArrOfpence.splice(indx,ArrOfpence.length-1);
+  console.log(ArrOfpence)
+  for (var i=0 ; i<ArrOfpence.length;i++){
+    
+  
+
+  }
+
+}

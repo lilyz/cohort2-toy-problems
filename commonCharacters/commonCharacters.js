@@ -15,19 +15,9 @@ var commonCharacters = function(string1, string2) {
   
 
 var final=[];
-var strings=arguments
+var strings=arguments.join("")
+console.log(strings)
 
-for(var i=0; i<strings.length; i++){
-	for(var j=1; j<strings.length; j++){
-			var test = new RegExp("["+strings[j]+"]", 'g');
-			if(final.includes(strings[i].match(test).join("")) === false){
-		   final.push(strings[i].match(test).join(""))
-		}
-	}
+
+
 }
-
-return final;
-}
-
-
-

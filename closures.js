@@ -13,12 +13,15 @@ var cube = pow(3);
 square(3);//should return 9
 cube(3);//should return 27
 */
+<<<<<<< HEAD
 	function pow (expo){
 		return  x = function (num){
 			return Math.pow(num,expo)
 		}
 		
 	}
+=======
+>>>>>>> 3e9b530700a7fa2054c32376bb39e1fbaa388851
 
 /*
 Problem 2:

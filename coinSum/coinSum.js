@@ -18,7 +18,7 @@ function coinCombination(total) {
 	var arr=[1, 2, 5, 10, 20, 50,100,200]
 	var count=0;
  // count to calculate the total amount.
-  for (var i = total; i >= 0; i=i-arr[arr.length-1]) {
+  for (var i = total; i >= 0; i--) {
     count++;
   }
  return count;

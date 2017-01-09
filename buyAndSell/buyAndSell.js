@@ -20,14 +20,22 @@
 
 // Feel free to add helper functions if needed
 function getMaxOfArray(numArray) {
+<<<<<<< HEAD
 	return Math.max.apply(null, numArray);
 }
 function getMinOfArray(numArray) {
 	return Math.min.apply(null, numArray);
+=======
+  return Math.max.apply(null, numArray);
+}
+function getMinOfArray(numArray) {
+  return Math.min.apply(null, numArray);
+>>>>>>> 38d3baa03ca1511013858e091ad88f337836942c
 }
 
 var maximumProfit  = function(array) {
 	//your code is here
+<<<<<<< HEAD
 	var buyVal = getMinOfArray(array);
 	var buyValInd = array.indexOf(buyVal);
 	var gitBestSellVal = buyVal;
@@ -35,4 +43,6 @@ var maximumProfit  = function(array) {
 		var gitBestSellVal = Math.max(array[i],gitBestSellVal)
 	}
 	return gitBestSellVal - buyVal
+=======
+>>>>>>> 38d3baa03ca1511013858e091ad88f337836942c
 }

@@ -13,15 +13,11 @@ var cube = pow(3);
 square(3);//should return 9
 cube(3);//should return 27
 */
-function pow(ex){
+function Pow(ex){
 	var exponent=ex;
 	return {
-		square : function(base){
+		pow : function(base){
 			return Math.pow(base,exponent)
-		},
-		cube : function(base){
-			return Math.pow(base)
-		}
 	}
 }
 

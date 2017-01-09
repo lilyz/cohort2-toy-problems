@@ -18,10 +18,6 @@ function pow(ex){
 	return {
 		square : function(base){
 			return Math.pow(base,exponent)
-		},
-		cube : function(base){
-			return Math.pow(base)
-		}
 	}
 }
 
@@ -51,7 +47,6 @@ function pingPongTracker(){
 		timeSpentPlaying : function(){
 			time++
 			//time = setInterval(function(){}, 1000);
-
 			return time;
 		},
 		playOneGame : function(){
@@ -64,7 +59,6 @@ function pingPongTracker(){
 			}
 			else if (time >30 && time < 100) {
 				return "You need to improve your game"
-
 			}
 			//else if (time >100 ) {return "Wow, I have wasted a lot of time"}
 			return "Wow, I have wasted a lot of time"

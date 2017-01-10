@@ -34,3 +34,29 @@ function coinCombination (currency){
 	}
 	return count;
 }
+
+
+
+
+
+
+
+
+var longestCollatzSeq = function(n){
+	var chain =[]
+	chain.push(n)
+	if ( n % 2 !== 0){
+		chain.push(3 * n +1)
+	}
+	for (var i = 0 ; i < chain . length ; i++){
+		if (chain[i] % 2  !== 0){
+			chain.push(chain[i] * 3 +1)
+		}
+		else if(chain[i] % 2 ===0) {
+			chain.push(chain[i] / 2)
+		}
+		i++
+	}
+
+	return chain 
+}

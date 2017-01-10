@@ -14,10 +14,3 @@ square(3);//should return 9
 cube(3);//should return 27
 */
 
-function test(exp){
-
-
-	return function(base){
-		return Math.pow(base,exp)
-	}
-}

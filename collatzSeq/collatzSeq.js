@@ -32,3 +32,12 @@ var result = [num]
   // result.push(num)
   return result.length
 }
+function looping (){
+  var max = 0
+  for (var i = 0; i < 1000000; i++) {
+    if(longestCollatzSeq(i) > max){
+      max = longestCollatzSeq(i)
+    }
+  }
+  return max;
+}

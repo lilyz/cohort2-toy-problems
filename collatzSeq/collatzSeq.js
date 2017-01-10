@@ -15,6 +15,16 @@ NOTE: Once the chain starts the terms are allowed to go above one million.
 */
 
 
-var longestCollatzSeq = function(){
-
+var longestCollatzSeq = function(startingPoint){
+	if(startingPoint === 1)
+		console.log(startingPoint);
+	else{
+		if(startingPoint%2 === 0){
+			console.log(startingPoint);
+			longestCollatzSeq(startingPoint/2);
+		}else{
+			console.log(startingPoint);
+			longestCollatzSeq(3*startingPoint+1)
+		}
+	}
 }

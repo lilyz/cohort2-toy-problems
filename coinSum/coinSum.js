@@ -11,6 +11,7 @@ It is possible to make £2 in the following way:
 Given that total amount of pences, calculate the number of ways to create that amount.
 Example:
 coinCombination(200p) //-> 73682
+<<<<<<< HEAD
 */	
 	var coinCombination = function (amt){
 	
@@ -24,3 +25,6 @@ coinCombination(200p) //-> 73682
 	// return new array.length
 	}
 	// a guess on time complexity would be BigO(1) or constant time
+=======
+*/
+>>>>>>> 343fd57b9115bfa98f2276bd71d7649a0b7f81b4

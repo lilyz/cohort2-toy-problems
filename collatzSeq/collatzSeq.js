@@ -32,7 +32,7 @@ var longestCollatzSeq = function(n){
   }
   maxArr.push(result.length); //push the long of chain
   maxArr.push(n);              //push the number after his chain long
-  if (n<14){
+  if (n<1000000){
     longestCollatzSeq(n+1);
   }
   n=x;

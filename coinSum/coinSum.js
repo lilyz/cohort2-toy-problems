@@ -19,24 +19,12 @@ function coinCombination(num){
 var sum=0
 for (var i =0; i<arr.length; i++){
 for (var p =0; i<arr[i]; i++){
-
-		for(var j=0;j<2;j++){
+	for(var j=0;j<2;j++){
 			for(var k=0;k<3;k++){
 				for(var l=0;l<3;l++){
 					for(var d=0;d<3;d++){
 						for(var t=0;t<3;t++){
-							for(var o=0;o<3;o++){
-								for(var a=0;a<3;a++){
-									for(var d=0;d<2;d++){
-										if(d===0){
-											sum ++
-
-										}
-
-									}
-								}
-							}
-						}
+					
 					}
 				}
 			}

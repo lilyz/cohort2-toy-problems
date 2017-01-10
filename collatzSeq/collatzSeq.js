@@ -15,6 +15,33 @@ NOTE: Once the chain starts the terms are allowed to go above one million.
 */
 
 
-var longestCollatzSeq = function(){
+var longestCollatzSeq = function(n){
+  var x=n;           //save the start point 
+  var result = [];
+  var maxArr=[]
+  while(n>1){
+    result.push(n)
+    if (n%2 === 0){
+      n=n/2;
+      result.push(n)
+    }
+    else{
+      n=3*n+1
+      result.push(n)
+    }
+  }
+  maxArr.push(result.length); //push the long of chain
+  maxArr.push(n);              //push the number after his chain long
+  if (n<14){
+    longestCollatzSeq(n+1);
+  }
+  n=x;
+  arrayOfmax(maxArr)  //when he reach to 1000000
+}
+
+var arrayOfmax=function(array){
+  var max= Math.max.apply(null, numArray)
+  indexOfmax=array.indexOf(max);
+  return array[max+1];     // I push the number after his chain long 
 
 }

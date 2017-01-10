@@ -10,11 +10,15 @@ var cube = pow(3);
 square(3);//should return 9
 cube(3);//should return 27
 */
+<<<<<<< HEAD
 function pow(exponent) {
 	return function(x) {
 		return Math.pow(x,exponent)
 	}
 }
+=======
+
+>>>>>>> 343fd57b9115bfa98f2276bd71d7649a0b7f81b4
 /*
 Problem 2:
 Write a function pingPongTracker that accepts no arguments and returns an object with the
@@ -51,6 +55,7 @@ var timeSpentPlaying = function (){
 			return time ;
 		}, 1000);
 		this.time++
+}
 }
 
 var playOneGame = function () {

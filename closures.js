@@ -52,6 +52,7 @@ var timeSpentPlaying = function (){
 		}, 1000);
 		this.time++
 }
+}
 
 var playOneGame = function () {
 	this.time++ ;

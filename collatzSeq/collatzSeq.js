@@ -34,11 +34,13 @@ function terms(value) {
 }
 
 function longestChain( maxNum) {
-  var temp=0;
+  var temp = 0;
+  var temp2 = 0;
   for(var i = 1 ; i < maxNum ; i++){
     if( terms ( i ) > temp ) {
       temp = terms ( i );
+      temp2 = i;
     }
   }
-  return temp;
+  return temp + 'the number is:' + i;
 }

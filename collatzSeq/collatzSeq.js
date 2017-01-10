@@ -14,7 +14,27 @@ Which starting number, under one million, produces the longest chain?
 NOTE: Once the chain starts the terms are allowed to go above one million.
 */
 
-
+// Time complexity: Big O(n^2) : using nested for loops
 var longestCollatzSeq = function(){
+	var count, longest, temp, arrayLongest;
+	longest = 0;
 
+	for ( var i = 10; i < 1000000; i++){
+		arrayLongest = [];
+		count = 0;
+		temp = i;
+		for (;temp !== 1;){
+			if ( temp % 2 === 0){
+				temp = temp / 2;
+				arrayLongest.push(temp);
+			}else {
+				temp = (temp * 3) + 1;
+				arrayLongest.push(temp);
+			}
+		}
+		if (arrayLongest.length > longest){
+			longest = arrayLongest.length;
+		}
+	}
+	return i + " is the number with the longest chain, which consists of: " + longest + " elements";
 }

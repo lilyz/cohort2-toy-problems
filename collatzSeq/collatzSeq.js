@@ -42,5 +42,5 @@ function longestChain( maxNum) {
       temp2 = i;
     }
   }
-  return temp + 'the number is:' + i;
+  return temp + ' the number is:' + i;
 }

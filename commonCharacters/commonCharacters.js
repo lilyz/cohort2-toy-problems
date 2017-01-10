@@ -26,7 +26,7 @@ for (var k = 0; k < str[0].length; k++) {
 	  	   bool=false;
 	  	}
 	  }
-		if(bool===true){
+		if(bool===true&&str2.indexOf(str[0][k])){
 			str2+=str[0][k]
 		}
 }
